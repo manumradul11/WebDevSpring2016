@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FormBuilderApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="services/user.service.client.js"></script>
+    <script src="services/forms.service.client.js"></script>
+    <script src="views/header/header.controller.js"></script>
+    <script src="views/sidebar/sidebar.controller.js"></script>
+    <script src="views/users/register.controller.js"></script>
+    <script src="views/users/profile.controller.js"></script>
+    <script src="views/users/login.controller.js"></script>
+    <script src="views/main/main.controller.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/admin/admin.controller.js"></script>
+    <script src="views/forms/forms.controller.js"></script>
+    <script src="views/forms/fields.controller.js"></script>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div ng-controller="MainController">
+    <div  ng-include="'views/header/header.view.html'"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div ng-include="'views/sidebar/sidebar.view.html'"></div>
+            <div ng-view>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<!--<script src="../../assets/js/vendor/holder.min.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+</body>
+</html>
