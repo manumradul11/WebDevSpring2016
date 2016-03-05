@@ -9,6 +9,7 @@
 
         function register(user) {
             $scope.message = null;
+            var foundUser = UserService.findUserByUsername(user.username);
             if (user == null) {
                 $scope.message = "Please fill in the required fields";
                 return;
@@ -25,8 +26,7 @@
                 $scope.message = "Passwords must match";
                 return;
             }
-            var user = UserService.findUserByUsername(user.username);
-            if (user != null) {
+            if (foundUser != null) {
                 $scope.message = "User already exists";
                 return;
             }

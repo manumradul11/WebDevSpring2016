@@ -42,7 +42,7 @@
 
         function findUserByUsername (username) {
             for (var u in model.users) {
-                if (model.users[u].username === username) {
+                if (model.users[u].username == username) {
                     return model.users[u];
                 }
             }
@@ -51,7 +51,7 @@
 
         function findUserById(userId) {
             for (var u in model.users) {
-                if (model.users[u]._id === userId) {
+                if (model.users[u]._id == userId) {
                     return(model.users[u]);
                 }
             }
@@ -60,7 +60,7 @@
 
         function deleteUserById(userId, callback) {
             for (var u in model.users) {
-                if (model.users[u]._id === userId) {
+                if (model.users[u]._id == userId) {
                     callback((model.users.splice(u,1)));
                 }
             }
@@ -85,14 +85,14 @@
             callback(model.users);
         }
 
-        function findUserByCredentials(username,password,callback) {
-            for (var u in model.users) {
-                if (model.users[u].username === username &&
-                    model.users[u].password === password) {
-                    callback(model.users[u]);
+        function findUserByCredentials(username,password) {
+            for (var u = 0; u < model.users.length; u++) {
+                if (model.users[u].username == username &&
+                    model.users[u].password == password) {
+                    return(model.users[u]);
                 }
             }
-            callback(null);
+            return(null);
         }
 
         function updateUser (userId,user,callback) {
