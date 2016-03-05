@@ -4,17 +4,19 @@
         .module("FormBuilderApp")
         .controller("FormController", FormController);
 
-    function FormController($scope)
+    function FormController($scope,FormService,UserService)
     {
+        var userid = UserService.getCurrentUser()._id;
         $scope.addForm = addForm;
         $scope.deleteForm = deleteForm;
         $scope.selectForm = selectForm;
         $scope.updateForm = updateForm;
 
+
         function updateForm(form)
         {
             $scope.forms[$scope.selectedFormIndex].title = form.title;
-
+            FormService
         }
 
         function selectForm(index)
@@ -33,14 +35,16 @@
 
         function addForm(form)
         {
-            var newForm = {
-                title: form.title
-            };
+            FormService.createFormForUser(userid,form,function(created_form)
+            {
+                $scope.forms.push(created_form);
+            });
 
-            $scope.forms.push(newForm);
         }
 
-
-        $scope.forms = forms;
+        FormService.findAllFormsForUser(userid,function(ret_forms)
+        {
+            $scope.forms= ret_forms;
+        })
     }
 })();

@@ -85,14 +85,14 @@
             callback(model.users);
         }
 
-        function findUserByCredentials(username,password) {
+        function findUserByCredentials(username,password,callback) {
             for (var u = 0; u < model.users.length; u++) {
                 if (model.users[u].username == username &&
                     model.users[u].password == password) {
-                    return(model.users[u]);
+                    callback(model.users[u]);
                 }
             }
-            return(null);
+            callback(null);
         }
 
         function updateUser (userId,user,callback) {

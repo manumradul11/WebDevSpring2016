@@ -46,7 +46,7 @@
         function createFormForUser(userId, form, callback) {
             var created_form = {
                 _id:(new Date).getTime(),
-                title: user.title,
+                title: form.title,
                 userId: userId
             };
             model.forms.push(created_form);
@@ -68,7 +68,6 @@
             var ret_form = model.findFormById(formId);
             if (ret_form != null) {
                 ret_form.title = newForm.title;
-                ret_form.userId = newForm.userId;
                 callback(ret_form);
             } else {
                 callback(null);
