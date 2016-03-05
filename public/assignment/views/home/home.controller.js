@@ -1,5 +1,9 @@
-app.controller("HomeController", HomeController);
+(function(){
+    angular
+        .module("FormBuilderApp")
+        .controller("HomeController", HomeController);
 
-function HomeController() {
-
-}
+    function HomeController($scope, $location) {
+        $scope.$location = $location;
+    }
+})();

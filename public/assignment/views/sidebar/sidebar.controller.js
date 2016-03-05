@@ -1,5 +1,8 @@
-app.controller("SidebarController", SidebarController);
+(function(){
+    angular
+        .module("FormBuilderApp")
+        .controller("SidebarController", SidebarController);
 
-function HomeController() {
-
-}
+    function  SidebarController($location) {
+    }
+})();

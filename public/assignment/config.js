@@ -10,15 +10,15 @@
                 controller: 'HomeController'
             })
             .when("/register", {
-                templateUrl: "views/register/register.view.html",
+                templateUrl: "views/users/register.view.html",
                 controller: "RegisterController"
             })
             .when("/login", {
-                templateUrl: "views/login/login.view.html",
+                templateUrl: "views/users/login.view.html",
                 controller: "LoginController"
             })
             .when("/profile", {
-                templateUrl: "views/profile/profile.view.html",
+                templateUrl: "views/users/profile.view.html",
                 controller: "ProfileController"
             })
             .when("/admin", {
@@ -26,8 +26,12 @@
                 controller: 'AdminController'
             })
             .when('/forms', {
-            templateUrl: '/views/forms/forms.view.html',
+            templateUrl: 'views/forms/forms.view.html',
             controller: 'FormController'
+            })
+            .when('/fields', {
+                templateUrl: 'views/forms/fields.view.html',
+                controller: 'FieldController'
             })
             .otherwise({
                 redirectTo: "/home"
