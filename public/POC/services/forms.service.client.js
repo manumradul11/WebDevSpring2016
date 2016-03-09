@@ -23,42 +23,54 @@
         return model;
 
 
-        function deleteFormById(userId,formId)
-        {
-            for (var f in model.forms){
-                if (model.forms[f].userId==userId && model.forms[f]._id === formId) {
-                    model.forms.splice(f,1);
 
+        function findFormById(formId) {
+            for (var f in model.forms) {
+                if (model.forms[f]._id === formId) {
+                    return(model.forms[f]);
                 }
             }
+            return(null);
         }
 
-        function createFormForUser(userId,form,index) {
+        function deleteFormById(formId, callback)
+        {
+            for (var f in model.forms){
+                if (model.forms[f]._id === formId) {
+                    callback((model.forms.splice(f,1)));
+                }
+            }
+            callback(model.forms);
+        }
+
+        function createFormForUser(userId, form, callback) {
             var created_form = {
-                _id:index,
+                _id:(new Date).getTime(),
                 title: form.title,
                 userId: userId
             };
             model.forms.push(created_form);
+            callback(created_form);
         }
 
-        function findAllFormsForUser(userId) {
+        function findAllFormsForUser(userId, callback) {
             var found_forms = [];
             for (var f in model.forms) {
                 if (model.forms[f].userId === userId) {
                     found_forms.push(model.forms[f]);
                 }
-
+                callback(found_forms);
             }
-            return found_forms;
         }
 
 
-        function updateFormById(userId,formId, newForm) {
-            for (var f in model.forms) {
-                if (model.forms[f].userId==userId && model.forms[f]._id === formId) {
-                    model.forms[f].title=newForm.title;
-                }
+        function updateFormById(formId, newForm, callback) {
+            var ret_form = model.findFormById(formId);
+            if (ret_form != null) {
+                ret_form.title = newForm.title;
+                callback(ret_form);
+            } else {
+                callback(null);
             }
         }
     }

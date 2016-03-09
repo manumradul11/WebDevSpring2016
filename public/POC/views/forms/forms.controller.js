@@ -6,7 +6,7 @@
 
     function FormController($scope,FormService,UserService)
     {
-        var userid = UserService.getCurrentUser();
+        var userid = UserService.getCurrentUser()._id;
         $scope.addForm = addForm;
         $scope.deleteForm = deleteForm;
         $scope.selectForm = selectForm;
@@ -15,8 +15,8 @@
 
         function updateForm(form)
         {
-            FormService.updateFormById(userid,$scope.selectedFormIndex,form);
-
+            $scope.forms[$scope.selectedFormIndex].title = form.title;
+            FormService
         }
 
         function selectForm(index)
@@ -30,18 +30,21 @@
         function deleteForm(form)
         {
             var index = $scope.forms.indexOf(form);
-            FormService.deleteFormById(userid,index)
+            $scope.forms.splice(index, 1);
         }
 
         function addForm(form)
         {
-            $scope.forms.push(form);
-            var index = $scope.forms.in;
-            $scope.forms.splice(index, 1);
-            FormService.createFormForUser(userid,form,index);
+            FormService.createFormForUser(userid,form,function(created_form)
+            {
+                $scope.forms.push(created_form);
+            });
 
         }
 
-        $scope.forms = FormService.findAllFormsForUser(userid);
+        FormService.findAllFormsForUser(userid,function(ret_forms)
+        {
+            $scope.forms= ret_forms;
+        })
     }
 })();
