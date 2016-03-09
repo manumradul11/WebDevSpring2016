@@ -16,6 +16,7 @@
         function updateForm(form)
         {
             FormService.updateFormById(userid,$scope.selectedFormIndex,form);
+            $scope.forms = FormService.findAllFormsForUser(userid);
 
         }
 
@@ -30,7 +31,8 @@
         function deleteForm(form)
         {
             var index = $scope.forms.indexOf(form);
-            FormService.deleteFormById(userid,index)
+            FormService.deleteFormById(userid,index);
+            $scope.forms = FormService.findAllFormsForUser(userid);
         }
 
         function addForm(form)
@@ -39,9 +41,9 @@
             var index = $scope.forms.in;
             $scope.forms.splice(index, 1);
             FormService.createFormForUser(userid,form,index);
+            $scope.forms = FormService.findAllFormsForUser(userid);
 
         }
 
-        $scope.forms = FormService.findAllFormsForUser(userid);
     }
 })();
