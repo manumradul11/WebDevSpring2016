@@ -1,0 +1,112 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Post Food Event</h1>
+    <div class="form-responsive">
+        <form class="form-horizontal">
+            <label for="inputEventTitle" class="control-label">First Name</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input ng-model="newPost.title" type="text" class="form-control" id="inputEventTitle" placeholder="Event Title">
+                </div>
+            </div>
+            <label for="eventDescription" class="control-label">Last Name</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <textarea ng-model="newPost.description" class="form-control" rows="5" id="eventDescription" placeholder="Description">
+                    </textarea>
+                </div>
+            </div>
+
+            <label for="offeringType" class="control-label">Offering Type</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <select ng-model="newpost.offerType" class="form-control" type="text" name="offeringType" id="offeringType">
+                        <option value="1">Promotional</option>
+                        <option value="2">Charity</option>
+                        <option value="3">Save food from being wasted</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="foodType" class="control-label">Food Type</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <select ng-model="newpost.foodType" class="form-control" type="text" name="foodType" id="foodType">
+                        <option value="1">Cooked food</option>
+                        <option value="2">Raw produce</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="place" class="control-label">Place</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <select ng-model="newpost.place" class="form-control" type="text" name="place" id="place">
+                        <option value="1"></option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="date" class="control-label">Date</label>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <div class="input-group date" data-provide="timepicker">
+                        <input type="time" class="form-control" id="date" placeholder="Select Date">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th " id="dateicon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <label class="control-label">Time From :</label>
+                    &nbsp;
+                    hour:
+                    <select ng-model="newpost.time.from.hr"  type="text" name="time" id="hr1">
+                            <option selected ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value="n">{{n}}</option>
+                    </select>
+                    min:
+                    <select ng-model="newpost.time.from.min"  type="text" name="time" id="min1">
+                        <option selected ng-repeat="n in [05,10,15,20,25,30,35,40,45,50,55,00]">{{n}}</option>
+                    </select>
+
+                    <select ng-model="newpost.time.from.am/pm"  type="text" name="time" id="am/pm1" value="1">
+                        <option  value="1">AM</option>
+                        <option  value="2">PM</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <label class="control-label">Time Till :</label>
+                    &nbsp;
+                    hour:
+                    <select ng-model="newpost.time.till.hr"  type="text" name="time" id="hr2">
+                        <option selected ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value="n">{{n}}</option>
+                    </select>
+                    min:
+                    <select ng-model="newpost.time.till.min"  type="text" name="time" id="min2">
+                        <option selected ng-repeat="n in [05,10,15,20,25,30,35,40,45,50,55,00]">{{n}}</option>
+                    </select>
+
+                    <select ng-model="newpost.time.till.am/pm"  type="text" name="time" id="am/pm2" value="1">
+                        <option  value="1">AM</option>
+                        <option  value="2">PM</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button ng-click="post(newpost)" class="btn btn-default">Register</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+</div>

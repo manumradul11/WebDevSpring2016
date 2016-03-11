@@ -1,6 +1,6 @@
 (function() {
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .factory("UserService", UserService);
 
     function UserService($rootScope) {
@@ -75,7 +75,7 @@
                 username: user.username,
                 password: user.password,
                 roles:["student"],
-                email:user.email
+                email:user.email,
             };
             model.users.push(created_user);
             callback(created_user);
@@ -87,7 +87,7 @@
 
         function findUserByCredentials(username,password) {
 
-            var ret_user;
+            var ret_user=null;
             for (var u = 0; u < model.users.length; u++) {
                 if (model.users[u].username == username &&
                     model.users[u].password == password) {
@@ -98,7 +98,8 @@
             return null;
         }
 
-        function updateUser (userId,user,callback) {
+        function updateUser (userId,user) {
+            var ret_user=null;
             for (var u in model.users) {
                 if (model.users[u]._id == userId) {
                     model.users[u].username = user.username;
@@ -106,10 +107,11 @@
                     model.users[u].lastName = user.lastName;
                     model.users[u].password = user.password;
                     model.users[u].email = user.email;
-                    callback(model.users[u]);
+                    ret_user=model.users[u];
+                    return ret_user;
                 }
             }
-            callback(null);
+            return null;
         }
     }
 })();

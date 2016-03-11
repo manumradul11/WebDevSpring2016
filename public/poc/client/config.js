@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .config(config);
 
     function config($routeProvider) {
@@ -23,15 +23,15 @@
             })
             .when("/admin", {
                 templateUrl: "views/admin/admin.view.html",
-                controller: 'AdminController'
+                controller: "AdminController"
             })
             .when('/posts', {
             templateUrl: 'views/posts/posts.view.html',
-            controller: 'FormController'
+            controller: "FormController"
             })
             .when('/fields', {
                 templateUrl: 'views/posts/posts.view.html',
-                controller: 'FieldController'
+                controller: "PostController"
             })
             .otherwise({
                 redirectTo: "/home"

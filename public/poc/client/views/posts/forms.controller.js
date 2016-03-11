@@ -1,7 +1,7 @@
 (function()
 {
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .controller("FormController", FormController);
 
     function FormController($scope,FormService,UserService)

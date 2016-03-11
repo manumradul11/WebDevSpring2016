@@ -1,0 +1,9 @@
+.centered {
+    margin: auto;
+    text-align:justify;
+}
+
+.custom-width
+{
+    width: 50%;
+}
