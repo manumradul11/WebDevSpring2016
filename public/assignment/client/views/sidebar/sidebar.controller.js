@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .controller("SidebarController", SidebarController);
 
     function  SidebarController($location) {

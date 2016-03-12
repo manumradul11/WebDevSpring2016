@@ -1,6 +1,6 @@
 (function() {
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .factory("FormService", FormService);
 
     function FormService($rootScope) {

@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FeeFoodApp")
+        .module("FormBuilderApp")
         .controller("LoginController", LoginController);
 
     function LoginController ($scope, UserService, $location){

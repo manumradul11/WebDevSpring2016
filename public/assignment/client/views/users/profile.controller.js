@@ -1,36 +1,25 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("FeeFoodApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($scope, UserService, $location) {
+    function ProfileController($scope,$rootScope, UserService, $location) {
 
-        $scope.error = null;
-        $scope.message = null;
+         var currentUser = UserService.getCurrentUser();
 
-        $scope.currentUser = UserService.getCurrentUser();
-        if (!$scope.currentUser) {
-            $location.url("/home");
-        }
 
-        $scope.updateUser = updateUser;
+        $scope.update = update;
 
-        function updateUser (user) {
+        function update(user) {
             // same validation as register
-            $scope.error = null;
-            $scope.message = null;
 
-            UserService.updateUser(user,function(updatedUser)
-            {
-                $scope.currentUser=updatedUser;
-                if (user) {
-                    $scope.message = "User updated successfully";
-                    UserService.setCurrentUser($scope.currentUser);
-                } else {
-                    $scope.message = "Unable to update the user";
-                }
-            });
+            var ret_user = UserService.updateUser(currentUser._id,user);
 
+            if (ret_user) {
+                $rootScope.currentUser = ret_user;
+                UserService.setCurrentUser(ret_user);
+                $location.url("/home");
+            }
 
         }
     }

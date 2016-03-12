@@ -8,8 +8,8 @@
         <li ng-show="currentUser.roles.indexOf('admin') >= 0"
             ng-class="{'active': $location.url() === '/admin'}">
             <a href="#/admin">   Admin  </a></li>
-        <li ng-class="{'active': $location.url()=='/posts'}"
+        <li ng-class="{'active': $location.url()=='/forms'}"
             ng-show="currentUser!=null">
-            <a href="#/posts">   Post Food   </a></li>
+            <a href="#/forms">   Forms   </a></li>
     </ul>
 </div>
