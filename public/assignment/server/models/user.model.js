@@ -4,7 +4,7 @@ module.exports = function() {
     var api = {
 
         createUser: createUser,
-        findAllUser: findAllUser,
+        findAllUsers: findAllUsers,
         findUserById: findUserById,
         updateUser: updateUser,
         deleteUser: deleteUser,
@@ -17,12 +17,15 @@ module.exports = function() {
     function createUser (user) {
         var created_user = {
             _id:(new Date).getTime(),
-            firstname: user.firstname,
-            lastname: user.lastname,
+            firstName:user.firstName,
+            lastName:user.lastName,
             username: user.username,
-            password: user.password
+            password: user.password,
+            email:user.email,
+
         };
         mock.push(created_user);
+        return created_user;
     }
 
     function deleteUser(userId) {
@@ -31,7 +34,8 @@ module.exports = function() {
             if (mock[i]._id == userId) {
                 mock.splice(i,1);
             }
-        };
+        }
+        return mock;
     }
 
     function updateUser (userId,user) {
@@ -44,6 +48,7 @@ module.exports = function() {
                 mock[i].password = user.password;
             }
         }
+        return mock;
     }
 
     function findUserById(userId) {
@@ -56,15 +61,15 @@ module.exports = function() {
         return null;
     }
 
-    function findAllUser() {
+    function findAllUsers() {
 
         return mock;
     }
 
 
-    function findUserByCredentials(credentials) {
+    function findUserByCredentials(username,password) {
         for(var i in mock) {
-            if(mock[i].username === credentials.username && mock[i].password === credentials.password) {
+            if(mock[i].username === username && mock[i].password === password) {
                 return mock[i];
             }
         }

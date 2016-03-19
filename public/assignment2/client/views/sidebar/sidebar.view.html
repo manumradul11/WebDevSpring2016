@@ -1,0 +1,77 @@
+<div ng-controller="SidebarController" class="col-sm-3 col-md-2 sidebar">
+    <h1>Search</h1>
+    <ul class="nav">
+        <div class="form-responsive">
+            <form class="form-horizontal">
+                <label for="offeringType" class="control-label">Offering Type</label>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <select ng-model="newpost.offerType" class="form-control" type="text" name="offeringType" id="offeringType">
+                            <option selected value="1">Promotional</option>
+                            <option value="2">Charity</option>
+                            <option value="3">Save food from being wasted</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="foodType" class="control-label">Food Type</label>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <select ng-model="newpost.foodType" class="form-control" type="text" name="foodType" id="foodType">
+                            <option value="1">Cooked food</option>
+                            <option value="2">Raw produce</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="place" class="control-label">Place</label>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <select ng-model="newpost.place" class="form-control" type="text" name="place" id="place">
+                            <option value="1"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="date" class="control-label">Date</label>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="time" class="form-control" id="date" placeholder="Select Date">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th " id="dateicon"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <label class="control-label">Time</label>
+                        <div>
+                            hour:
+                            <select ng-model="newpost.time.from.hr" class="form-control" type="text" name="timehr" id="hr">
+                                <option  ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value="n">{{n}}</option>
+                            </select>
+                            min:
+                            <select ng-model="newpost.time.from.min" class="form-control" type="text" name="timemin" id="min">
+                                <option  ng-repeat="n in [05,10,15,20,25,30,35,40,45,50,55,00]" value="n">{{n}}</option>
+                            </select>
+                            am/pm:
+                            <select ng-model="newpost.time.from.ampm" class="form-control" type="text" name="timeampm" id="ampm">
+                                <option value="1">AM</option>
+                                <option value="2">PM</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button ng-click="post(newpost)" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+    </ul>
+</div>

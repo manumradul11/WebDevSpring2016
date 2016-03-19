@@ -1,6 +1,8 @@
+"use strict";
+
 (function() {
     angular
-        .module("FeeFoodApp")
+        .module("FormBuilderApp")
         .factory("FormService", FormService);
 
     function FormService($rootScope) {

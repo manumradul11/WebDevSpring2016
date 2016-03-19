@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FeeFoodApp")
+        .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
     function RegisterController($location, $scope, UserService, $rootScope) {
@@ -9,7 +9,10 @@
 
         function register(user) {
             $scope.message = null;
-            var foundUser = UserService.findUserByUsername(user.username);
+            var foundUser=null;
+            UserService.findUserByUsername(user.username).then(function(response){
+                foundUser=response.data;
+            });
             if (user == null) {
                 $scope.message = "Please fill in the required fields";
                 return;
@@ -26,15 +29,28 @@
                 $scope.message = "Passwords must match";
                 return;
             }
+            if (!user.firstName) {
+                $scope.message = "Please provide a first name";
+                return;
+            }
+            if (!user.lastName) {
+                $scope.message = "Please provide a last name";
+                return;
+            }
+            if (!user.email) {
+                $scope.message = "Please provide an email";
+                return;
+            }
             if (foundUser != null) {
                 $scope.message = "User already exists";
                 return;
             }
-            UserService.createUser($scope.user,function(newUser)
-            {
-                UserService.setCurrentUser(newUser);
+
+            UserService.createUser(user).then(function(response){
+                UserService.setCurrentUser(response.data);
                 $location.url("/profile");
             });
+
 
         }
     }
