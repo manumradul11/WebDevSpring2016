@@ -8,8 +8,8 @@
 
         function login(user){
             UserService.findUserByCredentials(user.username,user.password).then(function(response){
-                if(response) {
-                    $rootScope.currentUser = response;
+                if(response!=null) {
+                    UserService.setCurrentUser(response);
                     $location.url("/profile");
                 }
                 else

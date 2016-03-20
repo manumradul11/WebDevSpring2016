@@ -11,7 +11,7 @@
             $scope.message = null;
             var foundUser=null;
             UserService.findUserByUsername(user.username).then(function(response){
-                foundUser=response.data;
+                foundUser=response;
             });
             if (user == null) {
                 $scope.message = "Please fill in the required fields";
@@ -47,7 +47,7 @@
             }
 
             UserService.createUser(user).then(function(response){
-                UserService.setCurrentUser(response.data);
+                UserService.setCurrentUser(response);
                 $location.url("/profile");
             });
 
