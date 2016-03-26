@@ -1,4 +1,4 @@
-﻿// Roting of requests
+﻿// Routing of requests
 
 var path = require('path');
 
