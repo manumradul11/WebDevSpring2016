@@ -1,39 +1,50 @@
-module.exports = function(app,model) {
-    app.get("/api/assignment/form/:formId", getFormById);
-    app.get("/api/assignment/user/:userId/form", getFormByUserId);
-    app.post("api/assignment/user/:userId/form", createFormForUser);
-    app.put("api/assignment/form/:formId", UpdateFormById);
-    app.delete("/api/assignment/form/:formId", DeleteFormById);
-
-    function getFormById(req,res) {
-        var formId = req.params.formId;
-        var form = model.findFormById(formId);
-        res.json(form);
-    }
-
-    function getFormByUserId(req,res) {
+module.exports = function(app,userModel,formModel)
+{
+    app.post("/api/assignment/user/:userId/form", function(req,res) {
+        console.log("in create new form");
         var userId = req.params.userId;
-        var forms = model.findFormByUserId(userId);
-        res.json(forms);
-    }
+        var newForm = req.body;
+        formModel.createFormForUser(userId,newForm);
+        res.json("ok");
+    });
 
-    function createFormForUser(req,res) {
-        var form = req.body;
-        var userId=req.params.userId;
-        var forms = model.createForm(form,userId);
-        res.json(forms);
-    }
-
-    function UpdateFormById(req, res) {
+    app.put("/api/assignment/form/:formId", function(req,res)
+    {
         var formId = req.params.formId;
-        var form=req.body;
-        var forms = model.updateForm(formId,form);
-        res.json(forms);
-    }
+        var upForm = req.body;
+        formModel.updateFormById(formId,upForm);
+        res.json("ok");
+    });
 
-    function DeleteFormById(req, res) {
-        var formId = req.params.formId;
-        var forms = model.deleteForm(formId);
+    //added userId parameter
+    app.delete("/api/assignment/form/:formId/user/:userId", function(req,res) {
+        var delFormId = req.params.formId;
+        var userId = req.params.userId;
+        formModel.deleteFormById(delFormId,userId);
+        res.json("ok");
+    });
+
+    //added userId parameter
+    app.get("/api/assignment/form/:formId/user/:userId", function(req,res)
+    {
+        var formIndex = req.params.formId;
+        var userId = req.params.userId;
+        var form = formModel.getFormByIndex(formIndex,userId);
+        res.json(form);
+    });
+
+    app.get("/api/assignment/user/:userId/form", function(req,res)
+    {
+        var userId = req.params.userId;
+        var forms = formModel.findAllFormsForUser(userId);
         res.json(forms);
-    }
+    });
+
+    app.get("/api/assignment/form",function(req,res)
+    {
+        var formId = req.query.formId;
+        var form = formModel.getFormById(formId);
+        res.json(form);
+    });
+
 };

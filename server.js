@@ -1,14 +1,26 @@
 var express = require('express');
-var bodyParser = require('body-parser');
-var multer = require('multer');
-var uuid = require("node-uuid");
 var app = express();
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var cookieParser  = require('cookie-parser');
+var multer = require('multer');
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
 
-var port = process.env.OPENSHIFT_NODEJS_PORT ||3000;
-app.use(multer());
+app.use(express.static(__dirname + '/public'));
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname+ '/public'));
-require("./public/assignment/server/app.js")(app);
+app.use(multer());
+app.use(session({ secret: 'manu',
+    saveUninitialized: true,
+    resave: true}));
+app.use(cookieParser('manu'));
+app.use(passport.initialize());
+app.use(passport.session());
+
+require("./public/assignment4/server/app.js")(app);
+
 app.listen(port, ipaddress);

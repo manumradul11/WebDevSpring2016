@@ -6,153 +6,47 @@
     </ul>
     <div class="form-responsive">
         <form class="form-horizontal">
-            <label for="inputFirstName" class="control-label">First Name</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
-                </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
-                </div>
-            </div>
-            <label for="inputLastName" class="control-label">Last Name</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-                </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
-                </div>
-            </div>
-            <label for="inputDateofBirth" class="control-label">Date of Birth</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="date" class="form-control" id="inputDateofbirth" placeholder="Select Date">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th " id="date"></span>
+            <div ng-repeat="field in model.fields" class="row topForm">
+                <div class="col-xs-7">
+                    <form>
+                        <div class="form-group">
+                            <label>{{field.label}}</label>
+
+                            <div ng-switch on="field.fieldType">
+                                <input ng-switch-when="Text" type="text" placeholder="field.placeholder">
+                                <textarea ng-switch-when="Textarea" class="form-control" rows="3"></textarea>
+                                <input ng-switch-when="Date" type="date">
+                                <select ng-switch-when="Options">
+                                    <option ng-repeat="option in field.options">{{option}}</option>
+                                </select>
+                                <div class="checkbox" ng-switch-when="Checkboxes">
+                                    <label ng-repeat="option in field.options">
+                                        <input type="checkbox" value="">
+                                        {{option}}
+                                    </label>
+                                </div>
+                                <div class="radio" ng-switch-when="Radios">
+                                    <label ng-repeat="option in field.options">
+                                        <input type="radio">
+                                        {{option}}
+                                    </label>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
-                </div>
-            </div>
-            <label for="inputGender" class="control-label">Gender</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <select class="form-control" type="text" name="inputGender" id="inputGender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
-                </div>
-            </div>
-            <label for="inputRoles" class="control-label">Roles</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <div class="checkbox" id="inputRoles">
-                        <label>
-                            <input type="checkbox" value="Admin" id="CheckAdmin"> Admin
-                        </label>
-                        <br>
-                        <label>
-                            <input type="checkbox" value="Student" id="CheckStudent"> Student
-                        </label>
-                        <br>
-                        <label>
-                            <input type="checkbox" value="User" id="CheckUser"> User
-                        </label>
-                    </div>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
-                </div>
-            </div>
-            <label for="inputLicense" class="control-label">License Agreement</label>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <div id="inputlicense">
-                        <input id="yes" type="radio" name="yes"/> <label for="yes">Yes</label><br>
-                        <input id="no" type="radio" name="no"/> <label for="no">No</label>
-                    </div>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-warning">
-                        <scan class="glyphicon glyphicon-pencil"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-plus"></scan>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                        <scan class="glyphicon glyphicon-remove"></scan>
-                    </a>
-                    <a href="#" class="btn btn-primary">
-                        <scan class="glyphicon glyphicon-align-justify"></scan>
-                    </a>
+                <div class="col-xs-5">
+                    <span href="#" class="glyphicon glyphicon-pencil"></span>
+                    <span href="#" class="glyphicon glyphicon-plus"></span>
+                    <button ng-click="removeField(field)" href="#" class="glyphicon glyphicon-remove"></button>
+                    <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                 </div>
             </div>
             <label for="AddNewField" class="control-label">Add New Field</label>
             <div class="form-group">
                 <div class="col-sm-10">
-                    <select ng-model="form.fieldType" class="form-control" type="text" name="AddNewField" id="AddNewField">
+                    <select ng-model="model.fieldType" class="form-control" type="text" name="AddNewField" id="AddNewField">
                         <option value="1">Single Line Text</option>
                         <option value="2">Multi Line Text</option>
                         <option value="3">Date</option>
@@ -162,23 +56,9 @@
                     </select>
                 </div>
                 <div>
-                    <button ng-click="addField(form.fieldType)" class="btn btn-primary">
+                    <button ng-click="addField(model.fieldType)" class="btn btn-primary">
                         <scan class="glyphicon glyphicon-plus"></scan>
                     </button>
-
-                    <div class="animate-switch-container" ng-switch on="form.fieldType">
-                        <div class="animate-switch" ng-switch-when="1">
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="text">
-                            </div>
-                        </div>
-                        <div class="animate-switch" ng-switch-when="2">Home Span</div>
-                        <div class="animate-switch" ng-switch-when="3">Settings Div</div>
-                        <div class="animate-switch" ng-switch-when="4">Home Span</div>
-                        <div class="animate-switch" ng-switch-when="5">Settings Div</div>
-                        <div class="animate-switch" ng-switch-when="6">Home Span</div>
-                        <div class="animate-switch" ng-switch-default></div>
-                    </div>
                 </div>
             </div>
 

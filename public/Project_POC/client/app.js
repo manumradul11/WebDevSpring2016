@@ -1,4 +1,4 @@
 (function(){
     angular
-        .module("FeeFoodApp", ["ngRoute"]);
+        .module("FreeFoodApp", ["ngRoute"]);
 })();
