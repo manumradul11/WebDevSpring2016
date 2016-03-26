@@ -1,33 +1,14 @@
-// Get require Node Modules
 var express = require('express');
-var app = express();
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var uuid = require("node-uuid");
+var app = express();
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-app.use(multer()); // for parsing multipart/form-data
-
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());   //for parsing application/json
-
-app.use(session({
-    secret: process.env.SESSION_SECRET || 'this is the secret'
-}));
-
-app.use(cookieParser());
-app.use(passport.initialize());
-app.use(passport.session());
-
-module.exports.server = app;
-// Listen to ports 3000 and Opneshift
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
-var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+var port = process.env.OPENSHIFT_NODEJS_PORT ||3000;
+app.use(multer());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname+ '/public'));
+require("./public/assignment/server/app.js")(app);
 app.listen(port, ipaddress);
-
-app.use(express.static(__dirname + '/public'));
-
-var routes = require("./public/Prototype/server/routes");
-routes(app, passport, LocalStrategy);
