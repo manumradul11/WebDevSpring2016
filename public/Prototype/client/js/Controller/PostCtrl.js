@@ -14,6 +14,7 @@
     $scope.message=null;
     $scope.result2 = '';
     $scope.options2 = null;
+    $scope.loc= $scope.post.place.name;
 
     //***************************************** Go To Home Page ****************************************//
 
