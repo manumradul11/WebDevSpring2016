@@ -24,7 +24,7 @@ function ($routeProvider) {
         }).
         when('/post', {
             templateUrl: 'views/Post.html',
-            controller: '',
+            controller: 'PostCtrl',
             resolve: {
                 loggedin: checkCurrentUser
             }
