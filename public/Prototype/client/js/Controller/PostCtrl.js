@@ -10,7 +10,7 @@
         time:{from:{hr:12,min:0,merd:"am"},
               till:{hr:12,min:0,merd:"am"}},
         errors: {}
-    };
+    }
     $scope.message=null;
     $scope.result2 = '';
     $scope.options2 = null;

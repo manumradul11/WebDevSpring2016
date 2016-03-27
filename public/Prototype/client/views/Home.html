@@ -1,5 +1,4 @@
 ﻿<div id="home">
-    <button ng-class="{'signInBtn':userProfile != null}" ng-show="userProfile != null" ng-click="goToPostPage()">Post</button>
         <div class="top-navigation">
             <div class="form-group">
                 <div>
@@ -17,6 +16,10 @@
                      ng-show="userProfile != null && profileOptionsToggle">
                     <p class="center">{{userProfile.email}}</p>
                     <hr />
+                    <input type="button"
+                           class="floatLeft btn btn-default"
+                           value="Post Food"
+                           ng-click="goToPostPage()" />
                     <input type="button"
                            class="floatLeft btn btn-default"
                            value="Profile"
