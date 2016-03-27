@@ -12,9 +12,11 @@
         errors: {}
     }
     $scope.message=null;
-    $scope.result = '';
-    $scope.options = null;
-    $scope.loc= $scope.post.place.geometry.location.lat();
+    $scope.details1='';
+    $scope.result1 = '';
+    $scope.options1 = null;
+
+    $scope.post.place= $scope.details1;
 
     //***************************************** Go To Home Page ****************************************//
 

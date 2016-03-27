@@ -47,9 +47,9 @@
                 <br />
                 <label>Place</label>
                 <span class="error">{{post.errors.place}}</span>
-                <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result" details='post.place' options='options'/>
+                <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
                 <br />
-                {{loc}}
+                {{details1.geometry.location.lat()}}
                 <br />
                 <label>Date</label>
                 <span class="error">{{post.errors.date}}</span>
