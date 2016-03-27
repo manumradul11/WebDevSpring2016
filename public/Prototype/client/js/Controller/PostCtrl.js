@@ -6,15 +6,15 @@
         offeringType: null,
         foodType: null,
         place: '',
-        date: null,
+        date: {checkOut:''},
         time:{from:{hr:12,min:0,merd:"am"},
               till:{hr:12,min:0,merd:"am"}},
         errors: {}
     }
     $scope.message=null;
-    $scope.details2 = '';
-    $scope.options2 = null;
-    $scope.loc= $scope.post.place.name;
+    $scope.result = '';
+    $scope.options = null;
+    $scope.loc= $scope.post.place.geometry.location.lat();
 
     //***************************************** Go To Home Page ****************************************//
 
@@ -62,7 +62,7 @@
     };
 
     $scope.validatePostDate = function () {
-        if ($scope.post.date == null || $scope.post.date == "") {
+        if ($scope.post.date.checkOut == null || $scope.post.date.checkOut== "") {
             $scope.post.errors.date = "Please enter Date";
         }  else {
             delete $scope.post.errors.date;
