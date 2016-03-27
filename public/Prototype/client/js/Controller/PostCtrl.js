@@ -1,4 +1,4 @@
-﻿app.controller("PostCtrl", function ($scope, MyService, $location, PostService, $rootScope) {
+﻿app.controller("PostCtrl", function ($scope, MyService, $location, $PostService, $rootScope) {
 
     $scope.post = {
         title: null,
@@ -32,7 +32,7 @@
         if (Object.keys($scope.post.errors).length == 0) {
 
             var newPost = $scope.post;
-            PostService.post(newPost, function (msg) {
+            $PostService.post(newPost, function (msg) {
                 if (msg == 'ok') {
                     message="Post Successfull";
                 }
