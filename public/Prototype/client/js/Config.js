@@ -12,7 +12,7 @@ function ($routeProvider) {
         }).
         when('/login', {
             templateUrl: 'views/Login.html',
-            controller: 'LoginCtrl',
+            controller: 'LoginCtrl'
 
         }).
         when('/profile', {

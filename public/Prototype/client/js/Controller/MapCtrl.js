@@ -109,11 +109,11 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
             map: map,
             animation: google.maps.Animation.DROP,
             title: title,
-            icon: '/img/red-dot.png'
+            icon: '/Prototype/client/img/red-dot.png'
         };
 
         if (title == 'You are here') {
-            markerOptions.icon = '/img/blue_dot.png';
+            markerOptions.icon = '/Prototype/client/img/blue_dot.png';
             content = "You are here";
         }
 
@@ -341,7 +341,7 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
                  });
 
         if (spinner == undefined) {
-            spinner = angular.element("<img src='../img/gps.gif' ng-show='loading' id='spinner'>");
+            spinner = angular.element("<img src='/Prototype/client/img/gps.gif' ng-show='loading' id='spinner'>");
             $element.append(spinner);
             $compile(spinner)($scope);
         }
