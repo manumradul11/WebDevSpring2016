@@ -22,6 +22,13 @@ function ($routeProvider) {
                 loggedin: checkCurrentUser
             }
         }).
+        when('/post', {
+            templateUrl: 'views/Post.html',
+            controller: '',
+            resolve: {
+                loggedin: checkCurrentUser
+            }
+        }).
     otherwise({
         redirectTo: '/home'
     })

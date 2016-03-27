@@ -19,9 +19,11 @@ app.controller("SidePanelCtrl", function ($rootScope, $scope, MyService,LoginSer
         toDate: null,
         within: 5,
         goingWith:null,
-        errors: {},
-        offeringType:null,
-        foodType:null
+        errors: {}
+    };
+
+    $scope.init = function () {
+        MyService.setFilter($scope.search);
     };
 
     $scope.result1 = '';

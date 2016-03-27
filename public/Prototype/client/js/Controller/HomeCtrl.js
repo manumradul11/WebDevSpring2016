@@ -4,6 +4,10 @@ app.controller("HomeCtrl", function ($scope, MyService, $location, LoginService,
 
     $scope.profileOptionsToggle = false;
 
+    $scope.goToPostPage = function () {
+        $location.url("/post");
+    };
+
     $scope.goToLoginPage = function () {
         $location.url("/login");
     };

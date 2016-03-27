@@ -25,6 +25,7 @@
                 </select>
                 <hr />
             </div>
+            <!--
             <div>
             <label>Offering Type</label>
             <select class='form-control' ng-model='search.offeringType' ng-change="resetFields()">
@@ -48,7 +49,7 @@
                 <label for="Autocomplete">Generic Autocomplete</label>
                 <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
             </div>
-
+            -->
             <div ng-show="search.goingWith == null || search.goingWith == ''">
                 <label>Event Category</label>
                 <span class="error">{{search.errors.type}}</span>
@@ -80,7 +81,7 @@
             <label>To Date</label>
             <span class="error">{{search.errors.toDate}}</span>
             <br />
-            <div class="input-group " data-provide="datepicker">
+            <div class="input-group ">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
                 <input type="date" class="form-control" ng-model="search.toDate" placeholder="To Date" aria-describedby="basic-addon1"
                        ng-change="validate()" />
