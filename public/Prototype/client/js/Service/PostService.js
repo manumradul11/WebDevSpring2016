@@ -19,7 +19,7 @@
                             merd:newPost.time.till.merd}
                 }
             }
-        }
+        };
 
         $http.post("/api/user/post", data)
         .success(function (res) {
@@ -31,5 +31,9 @@
             }
         });
     };
+
+    return {
+        post: post
+    }
 
 });
