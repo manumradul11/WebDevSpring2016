@@ -341,7 +341,7 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
                  });
 
         if (spinner == undefined) {
-            spinner = angular.element("<center><img src='../img/gps.gif' ng-show='loading' id='spinner'></center>");
+            spinner = angular.element("<img src='../img/gps.gif' ng-show='loading' id='spinner'>");
             $element.append(spinner);
             $compile(spinner)($scope);
         }
@@ -350,7 +350,7 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
             var html = "<div class='directionBox style='width:1000px'>\
                             <input type='text' ng-model='directionsTo' disabled style='width:600px' /> \
                             <input type='button' value='X' ng-click='clearDirection()'/> \
-                        </div>"
+                        </div>";
             directionsBox = angular.element(html);
             $compile(directionsBox)($scope);
             $element.append(directionsBox);
