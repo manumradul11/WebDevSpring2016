@@ -19,9 +19,7 @@ app.controller("SidePanelCtrl", function ($rootScope, $scope, MyService,LoginSer
         toDate: null,
         within: 5,
         goingWith:null,
-        errors: {},
-        offeringType:null,
-        foodType:null
+        errors: {}
     };
 
     $scope.result1 = '';

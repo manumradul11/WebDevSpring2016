@@ -341,7 +341,7 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
                  });
 
         if (spinner == undefined) {
-            spinner = angular.element("<center><img src='/Prototype/client/img/gps.gif' ng-show='loading' id='spinner'></center>");
+            spinner = angular.element("<img src='/Prototype/client/img/gps.gif' ng-show='loading' id='spinner'>");
             $element.append(spinner);
             $compile(spinner)($scope);
         }
