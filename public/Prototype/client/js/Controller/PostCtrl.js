@@ -12,7 +12,7 @@
         errors: {}
     }
     $scope.message=null;
-    $scope.result2 = '';
+    $scope.details2 = '';
     $scope.options2 = null;
     $scope.loc= $scope.post.place.name;
 
