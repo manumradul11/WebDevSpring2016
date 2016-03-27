@@ -1,4 +1,4 @@
-﻿<div id="Login">
+﻿<div id="Post">
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -33,27 +33,29 @@
                 </textarea>
                 <br />
                 <label>Offering type</label>
-                <span class="error">{{post.errors.offeringType}}</span>
                 <select class='form-control' ng-model='post.offeringType'>
-                    <option value='0'>Charity</option>
+                    <option selected value='0'>Charity</option>
                     <option value='1'>Saved Food</option>
                     <option value='2'>Promotional</option>
                 </select>
                 <br />
                 <label>Food type</label>
-                <span class="error">{{post.errors.foodType}}</span>
                 <select class='form-control' ng-model='post.foodType'>
-                    <option value='0'>Cooked</option>
+                    <option selected value='0'>Cooked</option>
                     <option value='1'>Raw Produce</option>
                 </select>
                 <br />
                 <label>Place</label>
                 <span class="error">{{post.errors.place}}</span>
-                <input type="text" ng-model="post.place" id="Autocomplete" class="form-control" ng-autocomplete="result2" details="details2" options="options2"/>
+                <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result2" details="post.place" options="options2"/>
                 <br />
                 <label>Date</label>
+                <span class="error">{{post.errors.date}}</span>
                 <div class="input-group date" data-provide="datepicker">
-                    <input type="time" ng-model="post.date" class="form-control" id="date" placeholder="Select Date">
+                    <input type="time"
+                           ng-model="post.date"
+                           ng-change="validatePostDate()"
+                           ng-focus="validatePostDate()"class="form-control" id="date" placeholder="Select Date">
                     <div class="input-group-addon">
                         <span class="glyphicon glyphicon-th " id="dateicon"></span>
                     </div>
@@ -67,12 +69,12 @@
                 </select>
                 min:
                 <select ng-model="post.time.from.min"  type="text" name="time" id="min1">
-                    <option selected ng-repeat="n in [05,10,15,20,25,30,35,40,45,50,55,00]">{{n}}</option>
+                    <option selected ng-repeat="n in [5,10,15,20,25,30,35,40,45,50,55,0]">{{n}}</option>
                 </select>
 
-                <select ng-model="post.time.from.am/pm"  type="text" name="time" id="am/pm1" value="1">
-                    <option  value="1">AM</option>
-                    <option  value="2">PM</option>
+                <select ng-model="post.time.from.merd"  type="text" name="time" id="am/pm1" value="1">
+                    <option  value="am">AM</option>
+                    <option  value="pm">PM</option>
                 </select>
 
                 <br />
@@ -88,11 +90,21 @@
                     <option selected ng-repeat="n in [05,10,15,20,25,30,35,40,45,50,55,00]">{{n}}</option>
                 </select>
 
-                <select ng-model="post.time.till.am/pm"  type="text" name="time" id="am/pm2" value="1">
+                <select ng-model="post.time.till.merd"  type="text" name="time" id="am/pm2" value="1">
                     <option  value="1">AM</option>
                     <option  value="2">PM</option>
                 </select>
                 <br />
+
+                <input type="button"
+                       class="btn btn-default btn-primary"
+                       value="Post"
+                       ng-click="PostEvent()" />
+                <br />
+
+                <label class="success">
+                    {{message}}
+                </label>
             </div>
         </div>
 

@@ -1,39 +1,39 @@
-﻿#Login {
+﻿#Post {
 }
 
-    #Login .navbar {
+    #Post .navbar {
     }
 
-    #Login .register-form {
+    #Post .register-form {
     }
 
-    #Login .login-form,.forgot-password-form {
+    #Post .login-form,.forgot-password-form {
         margin-top: 100px;
     }
 
-    #Login footer {
+    #Post footer {
         text-align: center;
         padding: 15px;
         margin-top: 20px;
         height: 50px;
     }
 
-    #Login .error {
+    #Post .error {
         color: red;
         float: right;
     }
 
 
-    #Login .success {
+    #Post .success {
         color: green;
         float: right;
     }
 
-    #Login .authentication-error{
+    #Post .authentication-error{
         color:red;
     }
 
-    #Login .float-right{
+    #Post .float-right{
         padding-top:7px;
         float:right
     }

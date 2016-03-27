@@ -8,6 +8,8 @@ var LoginCtrl = require(path.resolve('./public/Prototype/server/Controller/Login
 
 var ProfileCtrl = require(path.resolve('./public/Prototype/server/Controller/ProfileCtrl.js'))();
 
+var PostCtrl = require(path.resolve('./public/Prototype/server/Controller/PostCtrl.js'))();
+
 module.exports = function (app, passport, LocalStrategy) {
 
     //Sessions
@@ -54,6 +56,16 @@ module.exports = function (app, passport, LocalStrategy) {
             res.send(responce);
         });
 
+    });
+
+    // Post Event
+
+    app.post("/api/user/post", function (req, res) {
+        var email = req.body.email;
+        var post = req.body.data;
+        PostCtrl.post(email, post, function (responce) {
+            res.send(responce);
+        });
     });
 
     // Login

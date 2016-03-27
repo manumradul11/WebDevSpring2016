@@ -1,9 +1,7 @@
 ﻿<div id="home">
+    <button ng-class="{'signInBtn':userProfile != null}" ng-show="userProfile != null" ng-click="goToPostPage()">Post</button>
         <div class="top-navigation">
             <div class="form-group">
-                <div>
-                    <button ng-class="{'signInBtn':userProfile != null}" ng-show="userProfile != null" ng-click="goToPostPage()">Post</button>
-                </div>
                 <div>
                     <button ng-class="{'signInBtn':userProfile == null}" ng-show="userProfile == null" ng-click="goToLoginPage()">Sign in / Register</button>
                 </div>

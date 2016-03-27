@@ -26,6 +26,16 @@ module.exports = function (mongoose) {
         data: String
     });
 
+    var Posts = new mongoose.Schema({
+        title: String,
+        desc: String,
+        offeringType: String,
+        foodType: String,
+        place: {},
+        date: String,
+        Time: {}
+    });
+
 
     var Ratings = new mongoose.Schema({
         venueId: String,
@@ -44,14 +54,16 @@ module.exports = function (mongoose) {
         rewardPoints: Number,
         preferences: {},
         history: [],
+        posts:[],
         ratings: []
     }, { collection: "UserProfile" });
 
-    UserProfileModel = mongoose.model("UserProfileModel", UserProfileSchema)
+    UserProfileModel = mongoose.model("UserProfileModel", UserProfileSchema);
 
     var create = function (newUserProfile, callback) {
-        newUserProfile.preferences = { "0": [], "1": [], "2": [], "3": [] }
+        newUserProfile.preferences = { "0": [], "1": [], "2": [], "3": [] };
         newUserProfile.history = [];
+        newUserProfile.posts = [];
         newUserProfile.ratings = [];
 
         bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
@@ -76,6 +88,7 @@ module.exports = function (mongoose) {
             });
         });
     };
+
 
     var findById = function (id, callback) {
         UserProfileModel.findOne({ _id: id }, function (err, userFound) {
@@ -279,6 +292,32 @@ module.exports = function (mongoose) {
                         callback('error');
                     } else {
                         callback(savedUser.history);
+                    }
+                });
+            } else {
+                callback("error")
+            }
+        })
+    };
+
+    var createPost = function (email, data, callback) {
+        UserProfileModel.findOne({ email: email }, function (err, user) {
+            if (user) {
+
+                var found = false;
+                for (h in user.history) {
+                    if (user.posts[h].title == data.title) {
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    user.posts.unshift(data);
+                }
+                user.save(function (err, savedUser) {
+                    if (err) {
+                        callback('error');
+                    } else {
+                        callback(savedUser.posts);
                     }
                 });
             } else {

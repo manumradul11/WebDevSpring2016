@@ -11,6 +11,10 @@ module.exports = function () {
         UserProfile.create(newUserProfile, callback);
     };
 
+    var createNewPost = function (email,newPost, callback) {
+        UserProfile.createPost(email,newPost, callback);
+    };
+
     var findUserProfileByEmail = function (email, callback) {
         UserProfile.findByEmail(email, callback);
     };
@@ -85,6 +89,7 @@ module.exports = function () {
 
     return {
         createUserProfile: createUserProfile,
+        createNewPost:createNewPost,
         findUserProfileById:findUserProfileById,
         findUserProfileByEmail: findUserProfileByEmail,
         findUserProfileByEmailPassword: findUserProfileByEmailPassword,
