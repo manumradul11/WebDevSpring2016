@@ -35,9 +35,14 @@
 
             var newPost = $scope.post;
             PostService.post(newPost, function (msg) {
-            if (msg == 'ok') {
-            message="Post Successful";
-              }
+            if (msg == 'ok')
+            {
+                message="Post Successful";
+            }
+            else
+            {
+                message="Some Error happenned"
+            }
             });
         };
     };

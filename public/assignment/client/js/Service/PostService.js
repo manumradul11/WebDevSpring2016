@@ -29,7 +29,10 @@
             else if (res == 'ok') {
                 callback('ok');
             }
-        });
+        })
+        .error(function (err) {
+            callback(res);
+        })
     };
 
     return {

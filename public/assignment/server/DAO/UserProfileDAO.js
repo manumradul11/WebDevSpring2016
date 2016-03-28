@@ -305,7 +305,7 @@ module.exports = function (mongoose) {
             if (user) {
 
                 var found = false;
-                for (h in user.history) {
+                for (h in user.posts) {
                     if (user.posts[h].title == data.title) {
                         found = true;
                     }
