@@ -31,7 +31,7 @@
             }
         })
         .error(function (err) {
-            callback(res);
+            callback("error");
         })
     };
 
