@@ -21,7 +21,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname+ '/public'));
-require("./public/Prototype/server/routes.js")(app, passport, LocalStrategy);
+require("./public/assignment/server/routes.js")(app, passport, LocalStrategy);
 app.listen(port, ipaddress);
 module.exports.server = app;
 

@@ -1,6 +1,6 @@
 ﻿var nodemailer = require("nodemailer");
 var path = require('path');
-var DBManager = require(path.resolve("./public/Prototype/server/DAO/DatabaseManager.js"))();
+var DBManager = require(path.resolve("./public/assignment/server/DAO/DatabaseManager.js"))();
 
 var http = require('http');
 var C_rewardPoints = 50;

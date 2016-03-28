@@ -2,13 +2,13 @@
 
 var path = require('path');
 
-var DBManager = require(path.resolve("./public/Prototype/server/DAO/DatabaseManager.js"))();
+var DBManager = require(path.resolve("./public/assignment/server/DAO/DatabaseManager.js"))();
 
-var LoginCtrl = require(path.resolve('./public/Prototype/server/Controller/LoginCtrl.js'))();
+var LoginCtrl = require(path.resolve('./public/assignment/server/Controller/LoginCtrl.js'))();
 
-var ProfileCtrl = require(path.resolve('./public/Prototype/server/Controller/ProfileCtrl.js'))();
+var ProfileCtrl = require(path.resolve('./public/assignment/server/Controller/ProfileCtrl.js'))();
 
-var PostCtrl = require(path.resolve('./public/Prototype/server/Controller/PostCtrl.js'))();
+var PostCtrl = require(path.resolve('./public/assignment/server/Controller/PostCtrl.js'))();
 
 module.exports = function (app, passport, LocalStrategy) {
 

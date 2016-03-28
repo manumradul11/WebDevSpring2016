@@ -23,7 +23,7 @@ app.directive('myMap', function () {
 app.directive('sidePanel', function () {
     return {
         restrict: 'E',
-        templateUrl: '/Prototype/client/views/SidePanel.html',
+        templateUrl: '/assignment/client/views/SidePanel.html',
         replace: true
     };
 });
@@ -32,7 +32,7 @@ app.directive('sidePanel', function () {
 app.directive('infoBox', function () {
     return {
         restrict: 'E',
-        templateUrl: '/Prototype/client/views/InfoBox.html',
+        templateUrl: '/assignment/client/views/InfoBox.html',
         replace: true
     };
 });

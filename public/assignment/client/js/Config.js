@@ -1,4 +1,4 @@
-﻿var app = angular.module("wham", ['ngRoute', "pageslide-directive",'ngAutocomplete']);
+﻿var app = angular.module("FreeFood", ['ngRoute', "pageslide-directive",'ngAutocomplete']);
 
 app.config(['$routeProvider',
 function ($routeProvider) {

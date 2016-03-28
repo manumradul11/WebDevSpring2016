@@ -19,7 +19,7 @@
         function deleteFieldFromForm(formId,fieldId)
         {
             var deferred = $q.defer();
-            $http.delete("/api/assignment/form/:"+formId+"/field/:"+fieldId)
+            $http.delete("/api/assignment-3-serverside/form/:"+formId+"/field/:"+fieldId)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -28,7 +28,7 @@
 
         function createFieldForForm(formId, field) {
             var deferred = $q.defer();
-            $http.post("/api/assignment/form/:"+formId+"/field",field)
+            $http.post("/api/assignment-3-serverside/form/:"+formId+"/field",field)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -37,7 +37,7 @@
 
         function getFieldsForForm(formId) {
             var deferred = $q.defer();
-            $http.get("/api/assignment/form/:"+formId+"/field")
+            $http.get("/api/assignment-3-serverside/form/:"+formId+"/field")
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -46,7 +46,7 @@
 
         function getFieldForForm(formId, fieldId) {
             var deferred = $q.defer();
-            $http.get("/api/assignment/form/:"+formId+"/field/:"+fieldId)
+            $http.get("/api/assignment-3-serverside/form/:"+formId+"/field/:"+fieldId)
                 .success(function(response){
                     deferred.resolve(response);
                 });
@@ -56,7 +56,7 @@
 
         function updateField(formId, fieldId, field) {
             var deferred = $q.defer();
-            $http.put("/api/assignment/form/:"+formId+"/field/:"+fieldId,field)
+            $http.put("/api/assignment-3-serverside/form/:"+formId+"/field/:"+fieldId,field)
                 .success(function(response){
                     deferred.resolve(response);
                 });

@@ -1,11 +1,11 @@
 module.exports = function(app,model) {
-    app.post("/api/assignment/user", create);
-    app.get("/api/assignment/user", getUsers);
-    app.get("/api/assignment/user/:id", getUserById);
-    app.get("/api/assignment/user?username=username", getUsers);
-    app.get("/api/assignment/user?username=alice&password=wonderland", getUsers);
-    app.put("/api/assignment/user/:id", UpdateUserById);
-    app.delete("/api/assignment/user/:id", DeleteUserById);
+    app.post("/api/assignment-3-serverside/user", create);
+    app.get("/api/assignment-3-serverside/user", getUsers);
+    app.get("/api/assignment-3-serverside/user/:id", getUserById);
+    app.get("/api/assignment-3-serverside/user?username=username", getUsers);
+    app.get("/api/assignment-3-serverside/user?username=alice&password=wonderland", getUsers);
+    app.put("/api/assignment-3-serverside/user/:id", UpdateUserById);
+    app.delete("/api/assignment-3-serverside/user/:id", DeleteUserById);
 
     function getUsers(req,res) {
         var username = req.query.username;

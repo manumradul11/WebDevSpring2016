@@ -1,9 +1,9 @@
 module.exports = function(app,model) {
-    app.get("/api/assignment/form/:formId/field", getFieldsByFormId);
-    app.get("/api/assignment/form/:formId/field/:fieldId", getFieldByFormId);
-    app.post("/api/assignment/form/:formId/field", createFieldForForm);
-    app.put("/api/assignment/form/:formId/field/:fieldId", UpdateFieldByFormId);
-    app.delete("/api/assignment/form/:formId/field/:fieldId", DeleteFieldById);
+    app.get("/api/assignment-3-serverside/form/:formId/field", getFieldsByFormId);
+    app.get("/api/assignment-3-serverside/form/:formId/field/:fieldId", getFieldByFormId);
+    app.post("/api/assignment-3-serverside/form/:formId/field", createFieldForForm);
+    app.put("/api/assignment-3-serverside/form/:formId/field/:fieldId", UpdateFieldByFormId);
+    app.delete("/api/assignment-3-serverside/form/:formId/field/:fieldId", DeleteFieldById);
 
     function getFieldsByFormId(req,res) {
         var formId = req.params.formId;

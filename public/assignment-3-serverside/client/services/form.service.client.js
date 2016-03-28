@@ -21,34 +21,34 @@
 
         function getFormById(formId)
         {
-            return $http.get("/api/assignment/form?formId="+formId);
+            return $http.get("/api/assignment-3-serverside/form?formId="+formId);
         }
 
         //added userId parameter
         function getFormByIndex(index,userId)
         {
-            return $http.get("/api/assignment/form/"+index+"/user/"+userId);
+            return $http.get("/api/assignment-3-serverside/form/"+index+"/user/"+userId);
         }
 
         function createFormForUser(userId, form)
         {
-            return $http.post("/api/assignment/user/"+userId+"/form",form);
+            return $http.post("/api/assignment-3-serverside/user/"+userId+"/form",form);
         }
 
         function findAllFormsForUser(userId)
         {
-            return $http.get("/api/assignment/user/"+userId+"/form");
+            return $http.get("/api/assignment-3-serverside/user/"+userId+"/form");
         }
 
         //added userId parameter
         function deleteFormById(formId,userId)
         {
-            return $http.delete("/api/assignment/form/"+formId+"/user/"+userId);
+            return $http.delete("/api/assignment-3-serverside/form/"+formId+"/user/"+userId);
         }
 
         function updateFormById(formId, newForm)
         {
-            return $http.put("/api/assignment/form/"+formId,newForm);
+            return $http.put("/api/assignment-3-serverside/form/"+formId,newForm);
         }
     }
 })();

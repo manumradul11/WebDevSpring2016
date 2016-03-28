@@ -16,7 +16,7 @@
     $scope.result1 = '';
     $scope.options1 = null;
 
-    $scope.post.place= $scope.details1;
+
 
     //***************************************** Go To Home Page ****************************************//
 
@@ -28,6 +28,7 @@
 
     $scope.PostEvent = function () {
 
+        $scope.post.place= $scope.details1;
         $scope.validatePostTitle();
         $scope.validatePostDesc();
         $scope.validatePostDate();
