@@ -49,13 +49,13 @@
                 <span class="error">{{post.errors.place}}</span>
                 <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
                 <br />
-                {{details1.geometry.location.lat()}}
+                {{post.place.geometry.location.lat()}}
                 <br />
                 <label>Date</label>
                 <span class="error">{{post.errors.date}}</span>
                 <div class="input-group date" data-provide="datepicker">
-                    <input type="time"
-                           ng-model='post.date.checkOut'
+                    <input type="date"
+                           ng-model="parent.checkOut"
                            ng-change="validatePostDate()"
                            ng-focus="validatePostDate()"class="form-control" id="date" placeholder="Select Date">
                     <div class="input-group-addon">

@@ -6,7 +6,7 @@
         offeringType: null,
         foodType: null,
         place: '',
-        date: {checkOut:''},
+        date:null,
         time:{from:{hr:12,min:0,merd:"am"},
               till:{hr:12,min:0,merd:"am"}},
         errors: {}
@@ -15,7 +15,9 @@
     $scope.details1='';
     $scope.result1 = '';
     $scope.options1 = null;
-
+    $scope.parent = {checkOut:''};
+    $scope.post.place= $scope.details1;
+    $scope.post.date= $scope.parent.checkOut;
 
 
     //***************************************** Go To Home Page ****************************************//
@@ -65,7 +67,7 @@
     };
 
     $scope.validatePostDate = function () {
-        if ($scope.post.date.checkOut == null || $scope.post.date.checkOut== "") {
+        if ($scope.post.date == null || $scope.post.date== "") {
             $scope.post.errors.date = "Please enter Date";
         }  else {
             delete $scope.post.errors.date;
