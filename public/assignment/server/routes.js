@@ -60,7 +60,7 @@ module.exports = function (app, passport, LocalStrategy) {
 
     // Post Event
 
-    app.post("/api/user/post", function (req, res) {
+    app.post("/api/user/post/create", function (req, res) {
         var email = req.body.email;
         var post = req.body.data;
         PostCtrl.post(email, post, function (responce) {

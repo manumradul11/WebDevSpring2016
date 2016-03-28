@@ -300,7 +300,7 @@ module.exports = function (mongoose) {
         })
     };
 
-    var createPost = function (email, data, callback) {
+    var createNewPost = function (email, data, callback) {
         UserProfileModel.findOne({ email: email }, function (err, user) {
             if (user) {
 
@@ -315,9 +315,9 @@ module.exports = function (mongoose) {
                 }
                 user.save(function (err, savedUser) {
                     if (err) {
-                        callback('error');
+                        callback("error");
                     } else {
-                        callback(savedUser.posts);
+                        callback("ok");
                     }
                 });
             } else {
@@ -526,6 +526,7 @@ module.exports = function (mongoose) {
         deletePreference: deletePreference,
         changePassword: changePassword,
         createHistory: createHistory,
+        createNewPost:createNewPost,
         deleteHistory: deleteHistory,
         createRating: createRating,
         deleteRating: deleteRating,

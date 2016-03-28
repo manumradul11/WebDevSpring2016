@@ -21,7 +21,7 @@
             }
         };
 
-        $http.post("/api/user/post", data)
+        $http.post("/api/user/post/create", data)
         .success(function (res) {
             if (res == 'error') {
                 callback("Some Error occured in Server");

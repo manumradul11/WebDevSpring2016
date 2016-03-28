@@ -36,7 +36,7 @@
             var newPost = $scope.post;
             PostService.post(newPost, function (msg) {
             if (msg == 'ok') {
-            message="Post Successfull";
+            message="Post Successful";
               }
             });
         };
