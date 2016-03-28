@@ -16,8 +16,6 @@
     $scope.result1 = '';
     $scope.options1 = null;
     $scope.parent = {checkOut:''};
-    $scope.post.place= $scope.details1;
-    $scope.post.date= $scope.parent.checkOut;
 
 
     //***************************************** Go To Home Page ****************************************//
@@ -27,7 +25,7 @@
     };
 
     //***************************************** Post Event ****************************************//
-
+    $scope.post.date= $scope.parent.checkOut;
     $scope.PostEvent = function () {
 
         $scope.post.place= $scope.details1;
