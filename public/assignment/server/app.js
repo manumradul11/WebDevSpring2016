@@ -1,4 +1,7 @@
-module.exports = function (app,mongoose) {
+module.exports = function (app) {
+  var mongoose = require('mongoose');
+  mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/FreeFood');
+
   var userModel = require("./models/user.model.js")(mongoose);
   require("./services/user.service.server.js")(app,userModel);
 
