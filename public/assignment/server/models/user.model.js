@@ -1,6 +1,7 @@
-module.exports= function(uuid,mongoose){
+module.exports= function(uuid){
     // load user schema
-
+    var mongoose = require('mongoose');
+    mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/FreeFood');
     var UserModel = require("./user.schema.server.js")(mongoose);
     var q = require("q");
 

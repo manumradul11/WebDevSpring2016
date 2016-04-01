@@ -2,160 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14b734bf-1478-4249-b2f1-5beeeb982511" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/models/fields.model.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/app.js" afterPath="$PROJECT_DIR$/public/assignment/client/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/config.js" afterPath="$PROJECT_DIR$/public/assignment/client/config.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/css/dashboard.css" afterPath="$PROJECT_DIR$/public/assignment/client/css/dashboard.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/css/style.css" afterPath="$PROJECT_DIR$/public/assignment/client/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/index.html" afterPath="$PROJECT_DIR$/public/assignment/client/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/js/datepick.js" afterPath="$PROJECT_DIR$/public/assignment/client/js/datepick.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/services/field.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/client/services/field.service.client.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/services/form.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/client/services/form.service.client.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/services/user.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/client/services/user.service.client.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/admin/admin.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/admin/admin.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/admin/admin.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/admin/admin.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/forms/fields.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/fields.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/forms/fields.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/fields.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/forms/forms.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/forms.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/forms/forms.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/forms.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/header/header.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/header/header.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/header/header.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/header/header.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/home/home.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/home/home.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/home/home.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/home/home.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/main/main.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/main/main.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/sidebar/sidebar.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/sidebar/sidebar.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/sidebar/sidebar.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/sidebar/sidebar.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/login.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/login.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/login.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/login.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/profile.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/profile.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/profile.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/profile.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/register.controller.js" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/register.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/client/views/users/register.view.html" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/register.view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/app.js" afterPath="$PROJECT_DIR$/public/assignment/server/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/models/form.mock.json" afterPath="$PROJECT_DIR$/public/assignment/server/models/form.mock.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/models/form.model.js" afterPath="$PROJECT_DIR$/public/assignment/server/models/form.model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/models/user.mock.json" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.mock.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/models/user.model.js" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/services/field.service.server.js" afterPath="$PROJECT_DIR$/public/assignment/server/services/field.service.server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/services/form.service.server.js" afterPath="$PROJECT_DIR$/public/assignment/server/services/form.service.server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-3-serverside/server/services/user.service.server.js" afterPath="$PROJECT_DIR$/public/assignment/server/services/user.service.server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/Default.html" afterPath="$PROJECT_DIR$/public/Prototype/client/Default.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Default.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Default.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Home.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Home.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/InfoBox.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/InfoBox.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Login.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Login.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Post.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Post.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Profile-History.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Profile-History.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Profile-Preferences.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Profile-Preferences.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Profile-UserInfo.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Profile-UserInfo.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/Profile.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/Profile.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/css/SidePanel.css" afterPath="$PROJECT_DIR$/public/Prototype/client/css/SidePanel.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular-pageslide-directive.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/dist/angular-pageslide-directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular-pageslide-directive.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/dist/angular-pageslide-directive.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular-place-autocomplete-directive.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular-place-autocomplete-directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/.bower.json" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/.bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/README.md" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular-csp.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular-csp.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular-route.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular-route.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular-route.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular-route.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular-route.min.js.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular-route.min.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular.min.js.gzip" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/angular.min.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/bower.json" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/index.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/angular/package.json" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/bootstrap-3.3.6-dist/js/npm.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/bootstrap-3.3.6-dist/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jQuery/jquery-2.1.4.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jQuery/jquery-2.1.4.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/external/jquery/jquery.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/external/jquery/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-icons_228ef1_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-icons_ef8c08_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-icons_ffd27a_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/index.html" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.min.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.structure.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.structure.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.structure.min.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.structure.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.theme.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/jquery-ui-1.11.4/jquery-ui.theme.min.css" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/jquery-ui-1.11.4/jquery-ui.theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/sidepanel/angular-pageslide-directive.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/sidepanel/angular-pageslide-directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/dist/sidepanel/angular-pageslide-directive.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/sidepanel/angular-pageslide-directive.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/Thumbs.db" afterPath="$PROJECT_DIR$/public/Prototype/client/img/Thumbs.db" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/blue_dot.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/blue_dot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/facebook.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/facebook.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/google.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/google.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/gps.gif" afterPath="$PROJECT_DIR$/public/Prototype/client/img/gps.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/linkedIn.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/linkedIn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/menuButton.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/menuButton.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/red-dot.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/red-dot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/squares.gif" afterPath="$PROJECT_DIR$/public/Prototype/client/img/squares.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/twitter.png" afterPath="$PROJECT_DIR$/public/Prototype/client/img/twitter.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/img/wham.ico" afterPath="$PROJECT_DIR$/public/Prototype/client/img/wham.ico" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Config.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Config.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/HomeCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/HomeCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/InfoBoxCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/InfoBoxCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/LoginCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/LoginCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/MainCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/MainCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/MapCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/MapCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/PostCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/PostCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/ProfileCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/ProfileCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Controller/SidePanelCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Controller/SidePanelCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Default.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Default.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Directives/Directives.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Directives/Directives.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Service/LoginService.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Service/LoginService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Service/PostService.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Service/PostService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/Service/Service.js" afterPath="$PROJECT_DIR$/public/Prototype/client/js/Service/Service.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/dist/angular-pageslide-directive.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular-pageslide-directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/js/dist/angular-pageslide-directive.min.js" afterPath="$PROJECT_DIR$/public/Prototype/client/dist/angular-pageslide-directive.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Home.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Home.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/InfoBox.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/InfoBox.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Login.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Post.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Post.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Profile-History.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Profile-History.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Profile-Preferences.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Profile-Preferences.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Profile-UserInfo.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Profile-UserInfo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/Profile.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/Profile.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/client/views/SidePanel.html" afterPath="$PROJECT_DIR$/public/Prototype/client/views/SidePanel.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/Controller/LoginCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/server/Controller/LoginCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/Controller/PostCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/server/Controller/PostCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/Controller/ProfileCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype/server/Controller/ProfileCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/DAO/DatabaseManager.js" afterPath="$PROJECT_DIR$/public/Prototype/server/DAO/DatabaseManager.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/DAO/UserProfileDAO.js" afterPath="$PROJECT_DIR$/public/Prototype/server/DAO/UserProfileDAO.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/server/routes.js" afterPath="$PROJECT_DIR$/public/Prototype/server/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Prototype-copy/client/js/Controller/MapCtrl.js" afterPath="$PROJECT_DIR$/public/Prototype-copy/client/js/Controller/MapCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/server/app.js" afterPath="$PROJECT_DIR$/public/assignment/server/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/server/models/user.model.js" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
     </list>
     <ignored path="WebDev2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -176,21 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.schema.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
+      <file leaf-file-name="user.model.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.07377049">
+              <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/DatabaseManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="89" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -200,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/public/assignment/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -211,46 +79,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Prototype/server/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserProfileDAO.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/UserProfileDAO.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="77" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6345178">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -321,10 +149,10 @@
         <option value="$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/client/views/users/register.view.html" />
         <option value="$PROJECT_DIR$/public/assignment/server/services/user.service.server.js" />
-        <option value="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/app.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
       </list>
     </option>
   </component>
@@ -651,9 +479,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2253012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2253012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2313253" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2313253" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16144578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -889,14 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/DatabaseManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024390243">
-          <caret line="3" column="86" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/client/services/form.service.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19512194">
@@ -1017,26 +837,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/UserProfileDAO.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="77" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Prototype/server/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1049,10 +861,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/server/app.js">
+    <entry file="file://$PROJECT_DIR$/public/Prototype/server/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/DatabaseManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="89" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1060,23 +888,23 @@
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Prototype/server/DAO/UserProfileDAO.js">
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="77" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="77" />
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6345178">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.07377049">
+          <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
           <folding />
         </state>
       </provider>
