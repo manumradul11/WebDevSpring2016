@@ -1,5 +1,5 @@
 /**
- * Created by Priyanka on 3/16/16.
+ * Created by Manua on 3/16/16.
  */
 var curUsers = require("./user.mock.json");
 

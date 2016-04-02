@@ -1,5 +1,5 @@
 /**
- * Created by Priyanka on 3/17/16.
+ * Created by Manua on 3/17/16.
  */
 (function() {
     "use strict";

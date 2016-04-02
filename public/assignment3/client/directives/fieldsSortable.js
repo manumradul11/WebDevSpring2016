@@ -1,5 +1,5 @@
 /**
- * Created by Priyanka on 3/17/16.
+ * Created by Manua on 3/17/16.
  */
 (function(){
     angular
@@ -30,12 +30,6 @@
                     scope.fields[start] = scope.fields[end];
                     scope.fields[end] = temp;
                     scope.$apply();
-                /*
-                    var temp = scope.users[start];
-                    scope.users[start] = scope.users[end];
-                    scope.users[end] = temp;
-                    scope.$apply();
-                    */
                 }
             });
         }
