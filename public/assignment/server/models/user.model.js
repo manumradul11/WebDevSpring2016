@@ -1,4 +1,4 @@
-module.exports= function(uuid){
+module.exports= function(mongoose){
     // load user schema
     var UserModel = require("./user.schema.server.js")(mongoose);
     var q = require("q");

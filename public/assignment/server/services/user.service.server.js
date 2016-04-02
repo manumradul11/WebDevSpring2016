@@ -55,6 +55,23 @@ module.exports = function(app,model) {
         res.send(null);
     }
 
+    function create(req,res){
+        var user = req.body;
+        model
+            .createUser(user)
+            .then(
+                function(doc){
+                    console.log(doc);
+                    res.json(doc);
+                },
+                function( err ){
+                    console.log(err);
+                    res.status(400).send(err);
+
+                }
+            );
+    }
+
     function create(req, res) {
         var user = req.body;
         var created_user = model.createUser(user);
