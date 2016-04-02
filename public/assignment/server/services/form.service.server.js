@@ -12,12 +12,10 @@ module.exports = function(app,formModel)
             }
         );
     });
-
     app.put("/api/assignment/form/:formId", function(req,res)
     {
         var formId = req.params.formId;
         var upForm = req.body;
-
         formModel.updateFormById(formId,upForm);
         res.json("ok");
     });
@@ -86,5 +84,4 @@ module.exports = function(app,formModel)
             }
         );
     });
-
 };
