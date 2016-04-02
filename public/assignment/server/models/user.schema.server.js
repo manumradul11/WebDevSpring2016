@@ -8,7 +8,7 @@ module.exports = function (mongoose) {
         email: String,
         phones: [String],
         forms:[]
-    }, {collection: "UserProfile"});
+    }, {collection: "user"});
 
     UserModel = mongoose.model("UserModel", UserProfileSchema);
 

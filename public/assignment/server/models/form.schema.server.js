@@ -1,16 +1,13 @@
-module.exports = function (mongoose) {
+module.exports = function(mongoose) {
+    var FormSchema = mongoose.Schema({
+        userId: String,
+        title: String,
+        created: Date,
+        updated: Date,
+        fields: []
+    }, {collection: 'form'});
 
-    var FormSchema = new mongoose.Schema({
-        userId:String,
-        title:String,
-        fields: String,
-        lastName: String,
-        emails: [String],
-        phones: [String],
-        forms:[]
-    }, {collection: "user"});
+    FormModel = mongoose.model("FormModel", FormSchema);
 
-    UserProfileModel = mongoose.model("UserProfileModel", UserProfileSchema);
-
-    return UserProfileModel;
-};
+    return FormModel;
+}

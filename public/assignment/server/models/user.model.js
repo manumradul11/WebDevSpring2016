@@ -19,12 +19,7 @@ module.exports= function(mongoose){
         UserModel.findOne(
             {username: username, password : password},
             function(err,doc){
-                if(err){
-                    deferred.reject(err);
-                }else{
-                    //console.log("Found : "+ doc);
-                    deferred.resolve(doc);
-                }
+                deferred.resolve(doc);
             }
         );
 
@@ -37,11 +32,7 @@ module.exports= function(mongoose){
         UserModel.find(
             {username: userName},
             function(err,doc){
-                if(err){
-                    deferred.reject(err);
-                }else{
-                    deferred.resolve(doc);
-                }
+                deferred.resolve(doc);
             }
         );
 
@@ -50,15 +41,8 @@ module.exports= function(mongoose){
 
     function createUser(user){
         var deferred = q.defer();
-
         UserModel.create(user,function(err,doc){
-            if(err){
-                deferred.reject(err);
-            }
-            else{
-                deferred.resolve(doc);
-
-            }
+            deferred.resolve(doc);
         });
         return deferred.promise;
     }
@@ -70,12 +54,7 @@ module.exports= function(mongoose){
             {_id : userId},
             {$set : updatedUserDetails},
             function(err,stats){
-                if(err){
-                    deferred.reject();
-                }
-                else{
-                    deferred.resolve(stats);
-                }
+                deferred.resolve(stats);
             });
         //return a promise
         return deferred.promise;
@@ -87,12 +66,7 @@ module.exports= function(mongoose){
         UserModel.remove(
             {_id : userId},
             function(err,doc){
-                if(err){
-                    deferred.reject(err);
-                }
-                else{
-                    deferred.resolve(doc);
-                }
+                deferred.resolve(doc);
             });
 
         return deferred.promise;
@@ -103,12 +77,7 @@ module.exports= function(mongoose){
 
         UserModel.find(
             function(err,doc){
-                if(err){
-                    deferred.reject(err);
-                }
-                else{
-                    deferred.resolve(doc);
-                }
+                deferred.resolve(doc);
             });
 
         return deferred.promise;

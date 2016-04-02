@@ -12,20 +12,33 @@ module.exports = function(app,model) {
         var password = req.query.password;
         if(password)
         {
-            var user = model.findUserByCredentials(username,password);
-            res.json(user);
+            model.findUserByCredentials(username,password).then(
+                function(response){
+                    console.log(response);
+                    res.json(response);
+                }
+            );
             return;
         }
         if(username)
         {
-            var user = model.findUserByUsername(username);
-            res.json(user);
+            model.findUserByUsername(username).then(
+                function(response){
+                    console.log(response);
+                    res.json(response);
+                }
+            );
             return;
         }
         else
         {
-            var users = model.findAllUsers();
-            res.json(users);
+            model.findAllUsers().then(
+                function(response){
+                    console.log(response);
+                    res.json(response);
+                }
+            );
+
             return;
         }
 
@@ -34,8 +47,12 @@ module.exports = function(app,model) {
 
     function getUserById(req,res) {
         var id = req.params.id;
-        var user = model.findUserById(id);
-        res.json(user);
+        model.findUserById(id).then(
+            function(response){
+                console.log(response);
+                res.json(response);
+            }
+        );
     }
 
     function getUserByUsername(req,res) {
@@ -57,37 +74,32 @@ module.exports = function(app,model) {
 
     function create(req,res){
         var user = req.body;
-        model
-            .createUser(user)
-            .then(
-                function(doc){
-                    console.log(doc);
-                    res.json(doc);
-                },
-                function( err ){
-                    console.log(err);
-                    res.status(400).send(err);
-
+        model.createUser(user).then(
+                function(response){
+                    console.log(response);
+                    res.json(response);
                 }
             );
-    }
-
-    function create(req, res) {
-        var user = req.body;
-        var created_user = model.createUser(user);
-        res.json(created_user);
     }
 
     function UpdateUserById(req, res) {
         var id = req.params.id;
         var user=req.body;
-        var users = model.updateUser(id,user);
-        res.json(users);
+        model.updateUser(id,user).then(
+            function(response){
+                console.log(response);
+                res.json(response);
+            }
+        );
     }
 
     function DeleteUserById(req, res) {
         var id = req.params.id;
-        var users = model.deleteUser(id);
-        res.json(users);
+        model.deleteUser(id).then(
+            function(response){
+                console.log(response);
+                res.json(response);
+            }
+        );
     }
 };
