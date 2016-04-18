@@ -1,0 +1,131 @@
+﻿<div id="SidePanel" ng-init="init()" ng-controller="SidePanelCtrl" ng-class="{'showSidePanel' : showSidePanel, 'hideSidePanel' : !showSidePanel}">
+    <button ng-click="toggleSidePanel()" ng-show="!showSidePanel" class="glyphicon glyphicon-align-justify showSidePanelBtn"></button>
+    <pageslide ps-open="showSidePanel"
+               ps-push="true"
+               ps-side="left"
+               ps-speed="0.3">
+        <div class="sidepanel-content">
+            <button ng-click="toggleSidePanel()"
+                    ng-show="showSidePanel"
+                    class="btn hideSidePanelBtn">
+                X
+            </button>
+            <h2>
+                Filter & Search
+            </h2>
+            <br />
+            <div>
+                <label>Offering Type</label>
+                <select class='form-control' ng-model='search.offeringType'>
+                    <option selected value='0'>Charity</option>
+                    <option value='1'>Saved Food</option>
+                    <option value='2'>Promotional</option>
+                </select>
+                <hr />
+            </div>
+            <div class="form-group move-down">
+                <label for="Autocomplete">Place</label>
+                <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
+            </div>
+
+            <div>
+                <label>Food Type</label>
+                <span class="error">{{search.errors.type}}</span>
+                <br />
+
+                <div class="input-group ">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-glass"></span></div>
+                    <select class="form-control" ng-model="search.foodType">
+                        <option selected value='0'>Cooked</option>
+                        <option value='1'>Raw Produce</option>
+                    </select>
+                </div>
+                <br />
+                <label>Keywords</label>
+                <div class="input-group ">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                    <textarea class="form-control" ng-model="search.keywords" />
+                </div>
+                <br />
+            </div>
+            <label>Date</label>
+            <span class="error">{{search.errors.fromDate}}</span>
+            <br />
+            <div class="input-group ">
+                <div class="input-group date">
+                    month:
+                    <select ng-model="search.date.month"  type="text" name="time" id="month">
+                        <option selected ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value={{n}}>{{n}}</option>
+                    </select>
+                    day:
+                    <select ng-model="search.date.day"  type="text" name="time" id="day">
+                        <option selected ng-repeat="n in days" value={{n}}>{{n}}</option>
+                    </select>
+                    year:
+                    <select ng-model="search.date.year"  type="text" name="time" id="year">
+                        <option selected ng-repeat="n in [2016,2017,2018,2019,2020]" value={{n}}>{{n}}</option>
+                    </select>
+                </div>
+            </div><br />
+            <label>Time From :</label>
+            <div class="input-group date">
+            hour:
+            <select ng-model="search.time.from.hr"  type="text" name="time" id="hr1">
+                <option selected ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value={{n}}>{{n}}</option>
+            </select>
+            min:
+            <select ng-model="search.time.from.min"  type="text" name="time" id="min1">
+                <option selected ng-repeat="n in [5,10,15,20,25,30,35,40,45,50,55,0]" value={{n}}>{{n}}</option>
+            </select>
+            meridian:
+            <select ng-model="search.time.from.merd"  type="text" name="time" id="am/pm1">
+                <option  selected value="am">AM</option>
+                <option  value="pm">PM</option>
+            </select>
+            </div>
+
+            <br />
+
+            <label class="control-label">Time Till :</label>
+            <div class="input-group date">
+            hour:
+            <select ng-model="search.time.till.hr"  type="text" name="time" id="hr2">
+                <option selected ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]" value={{n}}>{{n}}</option>
+            </select>
+            min:
+            <select ng-model="search.time.till.min"  type="text" name="time" id="min2">
+                <option selected ng-repeat="n in [5,10,15,20,25,30,35,40,45,50,55,0]" value={{n}}>{{n}}</option>
+            </select>
+            meridian:
+            <select ng-model="search.time.till.merd"  type="text" name="time" id="am/pm2">
+                <option  value="am">AM</option>
+                <option  value="pm">PM</option>
+            </select>
+            </div>
+            <br />
+            <label>Find Events within :</label> {{search.within}} miles.
+            <input min="5" max="30" step="5" type="range" class="slider" ng-model="search.within" />
+        </div>
+        <div style="position:absolute; width: 50%; bottom: 30px; left: 0; right: 0; margin: auto;">
+            <table>
+                <tr>
+                    <td>
+                        <a class="box" target="_blank" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?app_id=309437425817038&sdk=joey&u=http://webdev2016-saxenamanu.rhcloud.com&display=popup&ref=plugin','facebookShare','width=500,height=300')">
+                            <img src="/Prototype/client/img/facebook.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="box" href="javascript:window.open('https://plus.google.com/share?url=http://webdev2016-saxenamanu.rhcloud.com','Google+Share','width=500,height=300')">
+                            <img src="/Prototype/client/img/google.png" alt="Google+" title="Google+" />
+                        </a>
+                    </td>
+                    <td>
+                        <a class="box" href="javascript:window.open('https://www.linkedin.com/cws/share?url=http://webdev2016-saxenamanu.rhcloud.com','linkedInshare','width=500,height=300')">
+                            <img src="/Prototype/client/img/linkedIn.png">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </pageslide>
+</div>

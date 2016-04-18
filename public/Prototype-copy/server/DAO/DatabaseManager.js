@@ -1,7 +1,7 @@
 ﻿var path = require('path');
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/wham');
+mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/project');
 
 var UserProfile = require(path.resolve("./public/Prototype/server/DAO/UserProfileDAO.js"))(mongoose);
 

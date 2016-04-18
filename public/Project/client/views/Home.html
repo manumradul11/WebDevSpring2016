@@ -1,0 +1,36 @@
+﻿<div id="home">
+        <div class="top-navigation">
+            <div class="form-group">
+                <button ng-class="{'signInBtn':userProfile == null}" ng-show="userProfile == null" ng-click="goToLoginPage()">Sign in / Register</button>
+            </div>
+            <div ng-show="userProfile != null">
+                <button ng-class="{'userBtn':userProfile != null}"
+                        ng-click="setProfileOptionsToggle()">
+                    {{userProfile.firstname}}
+                </button>
+                <br />
+                <br />
+                <div class="profileOptions"
+                     ng-show="userProfile != null && profileOptionsToggle">
+                    <p class="center">{{userProfile.email}}</p>
+                    <hr />
+                    <input type="button"
+                           ng-show="userProfile.roles='admin'"
+                           class="floatLeft btn btn-default"
+                           value="Admin"
+                           ng-click="goToAdmin()" />
+                    <input type="button"
+                           class="floatLeft btn btn-default"
+                           value="Profile"
+                           ng-click="goToProfile()" />
+                    <input type="button"
+                           class="floatRight btn btn-default"
+                           value="Logout"
+                           ng-click="logout()" />
+                </div>
+            </div>
+    </div>
+    <side-panel></side-panel>
+
+    <my-map></my-map>
+</div>  

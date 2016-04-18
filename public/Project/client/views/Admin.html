@@ -1,0 +1,83 @@
+<div id="profile" ng-init="init()">
+    <nav class="top-navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="" ng-click="goToHome()">
+                    <span id="logo">FoodEvents</span>
+                </a>
+            </div>
+        </div>
+        <div ng-show="userProfile != null">
+            <button ng-class="{'userBtn':userProfile != null}"
+                    ng-click="setProfileOptionsToggle()">
+                {{userProfile.firstname}}
+            </button>
+            <br />
+            <div class="profileOptions"
+                 ng-show="userProfile != null && profileOptionsToggle">
+                <p class="center">{{userProfile.email}}</p>
+                <hr />
+                <button type="button"
+                        class="floatRight btn btn-default"
+                        ng-click="logout()">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="page-header">Admin</h1>
+    <h2 class="page-header">Users</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    Username
+                </th>
+                <th>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    Password
+                </th>
+                <th>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    Roles
+                </th>
+                <th>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    Action
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" ng-model="adminCreate.email" id="username" placeholder="Username i.e Email">
+                </td>
+                <td>
+                    <input type="text" class="form-control" ng-model="adminCreate.password" id="password" placeholder="Password">
+                </td>
+                <td>
+                    <input type="text" class="form-control" ng-model="adminCreate.roles" id="roles" placeholder="Role">
+                </td>
+                <td align="right">
+                    <button type="button" class="glyphicon glyphicon-plus btn btn-primary" ng-click="addUser()"></button>
+                    <button type="button" class="glyphicon glyphicon-ok btn btn-primary btn-success" ng-click="updateUser()"></button>
+                </td>
+            </tr>
+            <tr ng-repeat="user in users track by $index">
+                <td>
+                    {{user.email}}
+                </td>
+                <td>
+                    {{user.password}}
+                </td>
+                <td>
+                    {{user.roles}}
+                </td>
+                <td align="right">
+                    <button type="button" class="glyphicon glyphicon-remove btn btn-danger" ng-click="deleteUser($index)"></button>&nbsp;
+                    <button type="button" class="glyphicon glyphicon-pencil btn btn-warning" ng-click="selectUser($index)"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
