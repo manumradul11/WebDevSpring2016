@@ -41,7 +41,7 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
 
                 var position = MyService.getUserPosition();
                 $scope.position = position;
-
+                mapOptions.center= new google.maps.LatLng($scope.position.lat, $scope.position.lon);
                 //set oArgs location parameter
                 oArgs.where = $scope.position.lat + "," + $scope.position.lon;
 
@@ -242,7 +242,8 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
             filterAppliedKeywords() ||
             filterAppliedWithin() ||
             filterAppliedFromDate() ||
-            filterAppliedToDate()) {
+            filterAppliedToDate()||
+            filterAppliedPlace()){
 
             // If any error in filters, do not update map
             if (Object.keys($scope.filter.errors).length > 0) return;
@@ -264,13 +265,18 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
                 oArgs.q = k;
             }
             if (filterAppliedWithin()) oArgs.within = $scope.filter.within;
+            if (filterAppliedPlace()) {
+                oArgs.where = $scope.filter.place_x + "," + $scope.filter.place_y;
+                mapOptions.center= new google.maps.LatLng($scope.filter.place_x, $scope.filter.place_y);
+                map = new google.maps.Map($element[0], mapOptions);
+            }
             if (filterAppliedFromDate() && !filterAppliedToDate()) oArgs.date = getDateInFormat($scope.filter.fromDate, $scope.filter.fromDate);
             if (!filterAppliedFromDate() && filterAppliedToDate()) oArgs.date = getDateInFormat(date, $scope.filter.toDate);
             if (filterAppliedFromDate() && filterAppliedToDate()) oArgs.date = getDateInFormat($scope.filter.fromDate, $scope.filter.toDate);
 
         }
 
-        $scope.loading = true;
+        $rootScope.loading = true;
 
         deleteMarkers();
 
@@ -335,16 +341,10 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
                          }
                      }
 
-
-                     $scope.loading = false;
+                     $rootScope.loading = false;
                  }).error(function (err) {
                  });
 
-        if (spinner == undefined) {
-            spinner = angular.element("<center><img src='/Project/client/img/gps.gif' ng-show='loading' id='spinner'></center>");
-            $element.append(spinner);
-            $compile(spinner)($scope);
-        }
 
         if (directionsBox == undefined) {
             var html = "<div class='directionBox style='width:1000px'>\
@@ -368,6 +368,14 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
     function filterAppliedKeywords() {
         if ($scope.filter != null) {
             if ($scope.filter.keywords == null || $scope.filter.keywords == '') return false;
+            else return true;
+        }
+        return false;
+    }
+
+    function filterAppliedPlace() {
+        if ($scope.filter != null) {
+            if ($scope.filter.place_x == null || $scope.filter.place_x == '') return false;
             else return true;
         }
         return false;
@@ -432,8 +440,10 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
 
         $scope.directionsTo = toAdd;
 
+
+
         directionsService.route({
-            origin: $scope.position.lat + "," + $scope.position.lon,
+            origin: getPlace_x() + "," + getPlace_y(),
             destination: lat + "," + lon,
             travelMode: google.maps.TravelMode.DRIVING
         }, function (response, status) {
@@ -445,12 +455,30 @@ app.controller("MapCtrl", function ($rootScope, $scope, MyService, $element, $co
         });
     }
 
+    function getPlace_x()
+    {
+        if($scope.filter.place_x!=null){
+            return $scope.filter.place_x
+        }
+        else
+        {return $scope.position.lat}
+    }
+
+    function getPlace_y()
+    {
+        if($scope.filter.place_y!=null){
+            return $scope.filter.place_y
+        }
+        else
+        {return $scope.position.lon}
+    }
+
     function getApiUrl() {
         var url = "http://api.eventful.com/json/events/search?app_key=k6C5qrCrdBgZMSkw";
 
         if (oArgs.q != "") url += "&q=" + oArgs.q;
 
-        url += "&location=" + $scope.position.lat.toFixed(6) + "," + $scope.position.lon.toFixed(6);
+        url += "&location=" + getPlace_x().toFixed(6) + "," + getPlace_y().toFixed(6);
         //Within
         url += "&within=" + parseInt(oArgs.within);
 

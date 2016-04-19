@@ -1,12 +1,6 @@
 ﻿
 app.controller("ProfileCtrl", function ($scope, LoginService, $location, $http, $rootScope) {
 
-    $scope.types = ["music", "conference", "comedy",
-                        "learning education", "family fun kids", "festivals parades", "movies film", "food",
-                        "fundraisers", "art ", "support", "holiday", "books", "attractions", "community",
-                        "business", "singles social", "schools alumni", "clubs associations",
-                        "outdoors recreation", "performing arts", "animals", "politics activism", "sales", "science",
-                        "religion spirituality", "sports", "technology", "other"];
 
     $scope.history = [];
     $scope.ratings = [];
@@ -25,7 +19,7 @@ app.controller("ProfileCtrl", function ($scope, LoginService, $location, $http, 
 
     $scope.newPreference = {
         of: $scope.activeSubTabIndex,
-        type: null,
+        type: "food",
         keywords: null,
         errors: {}
     }
@@ -86,7 +80,7 @@ app.controller("ProfileCtrl", function ($scope, LoginService, $location, $http, 
 
         $scope.newPreference = {
             of: $scope.activeSubTabIndex,
-            type: null,
+            type: "food",
             keywords: null,
             errors: {}
         }

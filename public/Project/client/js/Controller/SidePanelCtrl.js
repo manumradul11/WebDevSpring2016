@@ -5,15 +5,15 @@ app.controller("SidePanelCtrl", function ($rootScope, $scope, MyService,LoginSer
 
     $scope.userProfile = null;
 
-    $scope.types = ["music","family fun kids", "festivals parades", "movies film", "food",
-                        "fundraisers",""];
 
     $scope.search = {
-        type: null,
+        type: "food",
         keywords: null,
         fromDate: null,
         toDate: null,
         within: 5,
+        place_x:null,
+        place_y:null,
         goingWith:null,
         errors: {}
     };
@@ -25,6 +25,21 @@ app.controller("SidePanelCtrl", function ($rootScope, $scope, MyService,LoginSer
     $scope.result1 = '';
     $scope.options1 = null;
     $scope.details1 = '';
+
+    $scope.$watch(function () {
+        //return LoginService.getCurrentUSerProfile();
+        return $rootScope.user;
+    }, function (response) {
+        $scope.userProfile = response;
+    }, true);
+
+    $scope.$watch(function () {
+
+        return $scope.details1;
+    }, function (response) {
+        $scope.search.place_x = response.geometry.location.lat();
+        $scope.search.place_y = response.geometry.location.lng();
+    }, true);
 
     $scope.$watch(function () {
         //return LoginService.getCurrentUSerProfile();

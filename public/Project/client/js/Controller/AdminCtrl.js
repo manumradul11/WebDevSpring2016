@@ -35,7 +35,7 @@ app.controller("AdminCtrl", function AdminCtrl($scope,$location, $http, LoginSer
     function addUser()
     {
         var newUSer = $scope.adminCreate;
-        LoginService.register(newUSer, function (msg) {
+        LoginService.create(newUSer, function (msg) {
             if (msg == 'ok') {
                 init();
             }

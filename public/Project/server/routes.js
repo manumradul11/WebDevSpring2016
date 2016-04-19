@@ -65,6 +65,13 @@ module.exports = function (app, passport, LocalStrategy) {
         });
 
     });
+    app.post("/api/useradmin", function (req, res) {
+
+        LoginCtrl.register(req.body, function (responce) {
+            res.send(responce);
+        });
+
+    });
 
     app.post("/api/user/updateUserByEmail", function (req, res) {
 

@@ -51,9 +51,10 @@ module.exports = function (mongoose) {
     UserProfileModel = mongoose.model("UserProfileModel", UserProfileSchema)
 
     var create = function (newUserProfile, callback) {
-        newUserProfile.preferences = { "0": [], "1": [], "2": [], "3": [] }
+        newUserProfile.preferences = { "0": [], "1": [], "2": [], "3": [] };
         newUserProfile.history = [];
         newUserProfile.ratings = [];
+        newUserProfile.roles = "user";
 
         bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
             if (err) callback(err);
@@ -65,7 +66,7 @@ module.exports = function (mongoose) {
 
                 var newUserProfileObject = new UserProfileModel(newUserProfile);
 
-                newUserProfileObject.save(function (err, savedUserProfileResponce) {
+                newUserProfileObject.save(function (err, savedUserProfile) {
                     if (err) {
                         callback("error");
                     }

@@ -19,17 +19,24 @@
         .success(function (res) {
             if (res == 'User already exists') {
                 callback("Username aready exists");
-            } else if (res == 'error') {
-                callback("Some Error occured in Server");
             }
-            else if (res == 'ok') {
-                $http.post("/login", newUser)
-                    .success(function (res) {
-                        $rootScope.user = res;
-                        callback('ok');
-                    });
+            else{
+                $rootScope.user = res;
+                callback("ok");
             }
         });
+    };
+
+    var create = function (newUser, callback) {
+        $http.post("/api/useradmin", newUser)
+            .success(function (res) {
+                if (res == 'User already exists') {
+                    callback("Username aready exists");
+                }
+                else{
+                    callback("ok");
+                }
+            });
     };
 
     var getAllUsers = function (callback) {
@@ -69,7 +76,15 @@
     var login = function (user, callback) {
         $http.post("/login", user)
        .success(function (res) {
-           $rootScope.user = res;
+           if($rootScope.user!=null && $rootScope.user.roles=="admin")
+           {
+               //do nothing
+
+           }
+           else
+           {
+               $rootScope.user = res;
+           }
            callback('ok');
        })
         .error(function (err) {
@@ -244,6 +259,7 @@
         forgot: forgot,
         getAllUsers:getAllUsers,
         updateUserByEmail:updateUserByEmail,
-        deleteUserByEmail:deleteUserByEmail
+        deleteUserByEmail:deleteUserByEmail,
+        create:create
     }
 });
