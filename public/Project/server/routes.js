@@ -2,13 +2,15 @@
 
 var path = require('path');
 
-var DBManager = require(path.resolve("./public/Project/server/DAO/DatabaseManager.js"))();
 
-var LoginCtrl = require(path.resolve('./public/Project/server/Controller/LoginCtrl.js'))();
 
-var ProfileCtrl = require(path.resolve('./public/Project/server/Controller/ProfileCtrl.js'))();
+module.exports = function (app,mongoose,passport, LocalStrategy) {
 
-module.exports = function (app,passport, LocalStrategy) {
+    var DBManager = require(path.resolve("./public/Project/server/DAO/DatabaseManager.js"))(mongoose);
+
+    var LoginCtrl = require(path.resolve('./public/Project/server/Controller/LoginCtrl.js'))(DBManager);
+
+    var ProfileCtrl = require(path.resolve('./public/Project/server/Controller/ProfileCtrl.js'))(DBManager);
 
     //Sessions
     passport.use(new LocalStrategy({

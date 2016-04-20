@@ -7,19 +7,6 @@ module.exports = function(app,model) {
     app.put("/api/assignment/user/:id", UpdateUserById);
     app.delete("/api/assignment/user/:id", DeleteUserById);
 
-
-    passport.use(new LocalStrategy(
-        function(username, password, done)
-        {
-            model.findUserByCredentials({username: username, password: password}, function(err, user)
-            {
-                if (err) { return done(err); }
-                if (!user) { return done(null, false); }
-                return done(null, user);
-            })
-        }));
-
-
     function getUsers(req,res) {
         var username = req.query.username;
         var password = req.query.password;

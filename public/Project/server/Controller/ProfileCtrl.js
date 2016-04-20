@@ -1,7 +1,7 @@
 ﻿var path = require('path');
-var DBManager = require(path.resolve("./public/Project/server/DAO/DatabaseManager.js"))();
 
-module.exports = function () {
+
+module.exports = function (DBManager) {
 
     var updatePreference = function (email, preference, callback) {
         DBManager.updatePreference(email, preference, function (updatedPreferences) {

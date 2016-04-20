@@ -1,11 +1,8 @@
 ﻿var path = require('path');
-var mongoose = require('mongoose');
 
-mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/project');
+module.exports = function (mongoose) {
 
-var UserProfile = require(path.resolve("./public/Project/server/DAO/UserProfileDAO.js"))(mongoose);
-
-module.exports = function () {
+    var UserProfile = require(path.resolve("./public/Project/server/DAO/UserProfileDAO.js"))(mongoose);
 
     var createUserProfile = function (newUserProfile, callback) {
         UserProfile.create(newUserProfile, callback);

@@ -1,11 +1,9 @@
 ﻿var nodemailer = require("nodemailer");
 var path = require('path');
-var DBManager = require(path.resolve("./public/Project/server/DAO/DatabaseManager.js"))();
-
 var http = require('http');
 var C_rewardPoints = 50;
 
-module.exports = function () {
+module.exports = function (DBManager) {
 
     var checkIfUserExist = function (email, callback) {
         DBManager.findUserProfileByEmail(email, function (user) {
