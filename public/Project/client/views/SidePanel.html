@@ -44,7 +44,7 @@
             <br />
             <div class="input-group ">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
-                <input type="date" class="form-control" ng-model="search.fromDate" placeholder="From Date" aria-describedby="basic-addon1"
+                <input type="date" class="form-control" ng-model="search.fromDate" placeholder="yyyy-MM-dd" aria-describedby="basic-addon1"
                        ng-change="validate()"
                        min="{{currDate | date:'yyyy-MM-dd'}}" />
             </div><br />
@@ -53,7 +53,7 @@
             <br />
             <div class="input-group ">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
-                <input type="date" class="form-control" ng-model="search.toDate" placeholder="To Date" aria-describedby="basic-addon1"
+                <input type="date" class="form-control" ng-model="search.toDate" placeholder="yyyy-MM-dd" aria-describedby="basic-addon1"
                        ng-change="validate()" />
             </div><br />
             <label>Find Events within :</label> {{search.within}} miles.
