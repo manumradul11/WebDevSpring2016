@@ -8,7 +8,7 @@ var LoginCtrl = require(path.resolve('./public/Project/server/Controller/LoginCt
 
 var ProfileCtrl = require(path.resolve('./public/Project/server/Controller/ProfileCtrl.js'))();
 
-module.exports = function (app, passport, LocalStrategy) {
+module.exports = function (app,passport, LocalStrategy) {
 
     //Sessions
     passport.use(new LocalStrategy({
