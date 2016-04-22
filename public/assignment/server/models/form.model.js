@@ -207,18 +207,18 @@ module.exports = function(mongoose)
 
 
     function findAllFieldsForFormId(formId) {
-        var form;
-        findFormById(formId).then(
-            function(response){
-                form = response;
-            }
-        );
+        var deferred = q.defer();
 
-        if (form) {
-            return form.fields;
-        }
-
-        return [];
+        FormSchema.find(
+            {_id : formId},
+            function(err,stats){
+                if (err) {
+                    deferred.reject(err);
+                } else {
+                    deferred.resolve(stats);
+                }
+            });
+        return deferred.promise;
     }
 
     function findFormFieldById(formId, fieldId) {
@@ -234,12 +234,12 @@ module.exports = function(mongoose)
         return null;
     }
 
-    function deleteFormFieldById(formId, fieldId) {
+    function deleteFormFieldById(formId, field) {
         var deferred = q.defer();
 
         FormSchema.findByIdAndUpdate(
             formId,
-            {$pull: {'fields': {_id: fieldId}}},
+            {$pull: {'fields': {_id: field._id}}},
             {new: true},
             function (err, doc) {
                 if (err) {

@@ -6,7 +6,7 @@ module.exports = function(mongoose,Field) {
         title: String,
         created: Date,
         updated: Date,
-        fields: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Field' }]
+        fields: []
     }, {collection: 'form'});
 
     FormModel = mongoose.model("FormModel", FormSchema);

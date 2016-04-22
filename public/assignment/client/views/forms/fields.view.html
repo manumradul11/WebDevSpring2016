@@ -1,4 +1,4 @@
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-init="init()">
     <h1>Fields : {{form.title}}</h1>
     <ul class="nav nav-tabs">
         <li role="presentation"><a href="#/forms">Forms</a></li>
@@ -31,7 +31,7 @@
                 <div class="input-group-btn">
                     <button ng-click ="editField(field)" class="btn btn-warning" data-toggle="modal" data-target="#editField"><span class="glyphicon glyphicon-pencil"></span></button>
                     <button ng-click ="repeatField(field)" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
-                    <button ng-click ="deleteField(field._id)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button ng-click ="deleteField(field)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
                     <button class="btn btn-info"><span class="glyphicon glyphicon-align-justify"></span></button>
                 </div>
             </div>

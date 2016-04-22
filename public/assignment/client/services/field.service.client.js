@@ -44,9 +44,9 @@
             return deferred.promise;
         }
 
-        function deleteFieldFromForm(formId, fieldId) {
+        function deleteFieldFromForm(formId, field) {
             var deferred = $q.defer();
-            $http.delete("/api/assignment/form/" + formId + "/field/" + fieldId)
+            $http.delete("/api/assignment/form/" + formId + "/field/" + field)
                 .success(function(response){
                     deferred.resolve(response);
                 });

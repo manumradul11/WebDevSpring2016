@@ -17,12 +17,21 @@
         $scope.deleteField = deleteField;
         $scope.addField = addField;
         $scope.repeatField = repeatField;
+        $scope.init = init;
+
 
         if($routeParams.formId) {
             formId = $routeParams.formId;
             $scope.form = FormService.getFormById(formId);
         }
 
+        function init(){
+
+            FieldService.getFieldsForForm(formId).then(function(response)
+            {
+                $scope.fields= response.fields;
+            });
+        }
 
         function editField(field){
             $scope.fieldEdit = field;
@@ -50,9 +59,9 @@
             $scope.options = null;
         }
 
-        function deleteField(fieldId) {
+        function deleteField(field) {
             //2
-            FieldService.deleteFieldFromForm(formId, fieldId).then(function(response)
+            FieldService.deleteFieldFromForm(formId, field).then(function(response)
             {
                 $scope.fields= response.fields;
             });
@@ -109,7 +118,7 @@
 
             FieldService.createFieldForForm(formId, field).then(function(response)
             {
-                $scope.fields= response;
+                $scope.fields= response.fields;
             });
 
         }
