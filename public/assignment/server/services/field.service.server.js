@@ -23,25 +23,42 @@ module.exports = function (app, formModel) {
     function deleteFormFieldById(req, res) {
         var formId = req.params.formId;
         var fieldId = req.params.fieldId;
-        var fields = formModel.deleteFormFieldById(formId, fieldId);
-        res.json(fields);
+        formModel.deleteFormFieldById(formId, fieldId).then(
+            function (doc) {
+                res.json(doc);
+            },
+            function (err) {
+                res.status(400).send(err);
+            }
+        );
     }
 
     function createFormField(req, res) {
         var formId = req.params.formId;
         var field = req.body;
-        var newField = formModel.createFormField(formId, field);
-        var result= formModel.findAllFieldsForFormId(formId);
-        console.log("here in field server service"+result);
-        res.json(result);
+        formModel.createFormField(formId, field)
+            .then(
+                function (doc) {
+                    res.json(doc);
+                },
+                function (err) {
+                    res.status(400).send(err);
+                }
+            );
     }
 
     function updateFormField(req, res) {
         var formId = req.params.formId;
         var fieldId = req.params.fieldId;
         var field = req.body;
-        var fields = formModel.updateFormField(formId, fieldId, field);
-        res.json(fields);
+        formModel.updateFormFieldbyId(formId, fieldId, field).then(
+            function (doc) {
+                res.json(doc);
+            },
+            function (err) {
+                res.status(400).send(err);
+            }
+        );
     }
 
     function updateFormFields(req, res) {

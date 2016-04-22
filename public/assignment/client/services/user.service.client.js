@@ -76,7 +76,7 @@
 
         function findUserByCredentials(username,password) {
             var deferred = $q.defer();
-            $http.get("/api/assignment/user?username=" + username + "&password=" +  password)
+            $http.get("/api/assignment/user?username="+username+"&password="+password)
                 .success(function(response){
                     deferred.resolve(response);
                 });

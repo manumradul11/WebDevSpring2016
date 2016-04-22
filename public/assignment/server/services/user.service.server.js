@@ -10,8 +10,10 @@ module.exports = function(app,model) {
     function getUsers(req,res) {
         var username = req.query.username;
         var password = req.query.password;
+        console.log("here-3");
         if(password)
         {
+            console.log("here-2");
             model.findUserByCredentials(username,password).then(
                 function(response){
                     console.log(response);

@@ -16,6 +16,7 @@ module.exports= function(mongoose){
 
     function findUserByCredentials(username,password) {
         var deferred = q.defer();
+        console.log("here-1");
         UserModel.findOne(
             {username: username, password : password},
             function(err,doc){

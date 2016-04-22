@@ -12,12 +12,12 @@
         {
             getFormById : getFormById,
             getFormByIndex : getFormByIndex,
-            createFormForUser : createFormForUser,
-            findAllFormsForUser : findAllFormsForUser,
+            createFormForUser : createFormForUser,          //2
+            findAllFormsForUser : findAllFormsForUser,      //1
             deleteFormById : deleteFormById,
             updateFormById : updateFormById,
-            deleteFormByTitle:deleteFormByTitle,
-            updateFormByTitle:updateFormByTitle
+            deleteFormByTitle:deleteFormByTitle,            //4
+            updateFormByTitle:updateFormByTitle             //3
 
         };
 

@@ -1,5 +1,6 @@
 module.exports = function(app,formModel)
 {
+    //2
     app.post("/api/assignment/user/:userid/form", function(req,res) {
         console.log("in create new form");
         var userid = req.params.userid;
@@ -20,6 +21,8 @@ module.exports = function(app,formModel)
         res.json("ok");
     });
 
+
+    //3
     app.put("/api/assignment/form/byTitle/:title/user/:userid", function(req,res)
     {
         var title = req.params.title;
@@ -44,6 +47,7 @@ module.exports = function(app,formModel)
         );
     });
 
+    //4
     app.delete("/api/assignment/form/byTitle/:title/user/:userid", function(req,res) {
         var delFormTitle = req.params.title;
         var userid = req.params.userid;
@@ -63,6 +67,7 @@ module.exports = function(app,formModel)
         res.json(form);
     });
 
+    //1
     app.get("/api/assignment/user/:userid/form", function(req,res)
     {
         var userId = req.params.userid;

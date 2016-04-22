@@ -16,7 +16,8 @@
 
         $scope.newform =
         {
-            title:null
+            title:null,
+            updated:null
         };
 
         $scope.addForm = addForm;
@@ -28,12 +29,14 @@
 
         function init()
         {
+            //1
             FormService.findAllFormsForUser();
             $scope.newform.title=null;
         }
 
         function addForm()
         {
+            //2
             FormService.createFormForUser($scope.newform);
         }
 
@@ -50,7 +53,8 @@
 
         function updateForm()
         {
-
+            //3
+            $scope.newform.updated= new Date();
             FormService.updateFormByTitle(selectedTitle,$scope.newform);
             selectedTitle=null;
         }
@@ -58,6 +62,7 @@
 
         function deleteForm(index)
         {
+            //4
             var form = $scope.user.forms[index];
             FormService.deleteFormByTitle(form.title);
         }

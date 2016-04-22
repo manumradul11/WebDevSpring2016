@@ -1,12 +1,13 @@
-module.exports = function(mongoose) {
-    var FieldSchema = mongoose.Schema({
+module.exports = function(mongoose,Form) {
+    var fieldSchema = mongoose.Schema({
+        formId:{type:Schema.Types.ObjectId,ref:'Form'},
         label: String,
         type: String,
-        placeholder: Date,
+        placeholder: String,
         options: []
     }, {collection: 'field'});
 
-    FieldModel = mongoose.model("FieldModel", FieldSchema);
+    FieldModel = mongoose.model("FieldModel", fieldSchema);
 
     return FieldModel;
 }
