@@ -13,7 +13,7 @@ module.exports = function (app,mongoose,passport, LocalStrategy) {
     var ProfileCtrl = require(path.resolve('./public/Project/server/Controller/ProfileCtrl.js'))(DBManager);
 
     //Sessions
-    passport.use(new LocalStrategy({
+    passport.use('Project',new LocalStrategy({
         usernameField: 'email',
         passwordField: 'password'
     }, function (email, password, done) {
@@ -92,7 +92,7 @@ module.exports = function (app,mongoose,passport, LocalStrategy) {
     });
 
     // Login
-    app.post("/login", passport.authenticate('local'), function (req, res) {
+    app.post("/login", passport.authenticate('Project'), function (req, res) {
 
         var user = req.user;
         delete user.password;

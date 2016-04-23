@@ -9,24 +9,47 @@ module.exports= function(mongoose){
         createUser :createUser,
         updateUser:updateUser,
         deleteUser:deleteUser,
-        findAllUsers:findAllUsers
+        findAllUsers:findAllUsers,
+        findUserById:findUserById,
+        logout:logout
     };
 
     return api;
 
-    function findUserByCredentials(username,password) {
-        var deferred = q.defer();
+    function findUserByCredentials(username,password,done) {
         console.log("here-1");
         UserModel.findOne(
             {username: username, password : password},
             function(err,doc){
-                deferred.resolve(doc);
+                user = doc;
+                if (user != null) {
+                    return done(null, user);
+                } else {
+                    return done(null, false, { message: 'Unable to login' });
+                }
             }
         );
 
-        return deferred.promise;
     }
 
+    function logout(reqUser, req, callback) {
+        UserModel.findOne(
+            {username: reqUser.username, password : reqUser.password},
+            function(err,doc){
+                user = doc;
+                if (user != null) {
+                    req.logOut();
+
+                    req.session.destroy(function (err) {
+
+                        callback(200);
+                    });
+                } else {
+                    callback("Error");
+                }
+            }
+        );
+    };
 
     function findUserByUsername(userName){
         var deferred = q.defer();
@@ -40,8 +63,21 @@ module.exports= function(mongoose){
         return deferred.promise;
     }
 
+    function findUserById(userId,callback){
+        UserModel.find(
+            {_id: userId},
+            function(err,doc){
+                callback(doc);
+            }
+        );
+
+        return;
+    }
+
     function createUser(user){
         var deferred = q.defer();
+        var roles = user.roles.split(",");
+        user.roles=roles;
         UserModel.create(user,function(err,doc){
             deferred.resolve(doc);
         });
@@ -57,7 +93,6 @@ module.exports= function(mongoose){
             function(err,stats){
                 deferred.resolve(stats);
             });
-        //return a promise
         return deferred.promise;
     }
 
@@ -76,7 +111,7 @@ module.exports= function(mongoose){
     function findAllUsers(){
         var deferred = q.defer();
 
-        UserModel.find(
+        UserModel.find({},
             function(err,doc){
                 deferred.resolve(doc);
             });

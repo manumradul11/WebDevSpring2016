@@ -20,12 +20,13 @@
         $scope.init = init;
 
 
-        if($routeParams.formId) {
-            formId = $routeParams.formId;
-            $scope.form = FormService.getFormById(formId);
-        }
+
 
         function init(){
+            if($routeParams.formId) {
+                formId = $routeParams.formId;
+                $scope.form = FormService.getFormById(formId);
+            }
 
             FieldService.getFieldsForForm(formId).then(function(response)
             {

@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname+ '/public'));
 require("./public/Project/server/routes.js")(app,mongoose,passport, LocalStrategy);
-//require("./public/assignment/server/app.js")(app,mongoose);
+require("./public/assignment/server/app.js")(app,mongoose,passport, LocalStrategy);
 app.listen(port, ipaddress);
 module.exports.server = app;
 
